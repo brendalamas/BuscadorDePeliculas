@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+
+import Home from "./components/Home" 
+import UltimosLanzamientos from "./components/UltimosLanzamientos"
+import Populares from "./components/Populares"
+import Buscar from "./components/Buscar"
+import NavBar from "./components/NavBar"
+import ErrorNoEncontrado from "./components/ErrorNoEncontrado"
+import Peliculas from "./components/Peliculas"
+import PeliculasDetalle from "./components/PeliculasDetalle"
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <NavBar/>
+    <Routes>
+    <Route path='*' element={<ErrorNoEncontrado/>}/>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/ultimoslanzamientos' element={<UltimosLanzamientos/>}/>
+      <Route path='/populares' element={<Populares/>}/>
+      <Route path='/buscar' element={<Buscar/>}/>
+      <Route path='/peliculas' element={<Peliculas/>}/>
+      <Route path='/peliculas/:idPelicula' element={<PeliculasDetalle/>}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
