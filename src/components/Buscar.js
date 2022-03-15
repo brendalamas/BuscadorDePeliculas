@@ -1,6 +1,6 @@
-const Buscar = ()=>{
+const Buscar = () => {
     return(
-        <div> Buscar </div>
+        <h1>buscar </h1>
     )
 }
 

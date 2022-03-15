@@ -1,23 +1,42 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+
+import Typography  from "@mui/material/Typography";
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+
+import Presentacion from "./Presentacion"
+
+
 
 const UltimosLanzamientos = ()=>{
-    const [lanzamientos, setLanzamientos]= useState([]);
+    const [lanzamientos, setLanzamientos] = useState([])
 
     useEffect(()=>{
-        fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=c7e318bc4679faa16a6f940e1435e019&languaje=es-ES&page=1")
+        fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=6e372c30d27676867cdbcfd7e00f4cf2&language=es-AR&page=1`)
         .then(res=>res.json())
         .then(data=>{
-            setLanzamientos(data.results);
+            setLanzamientos(data.results)
+            console.log(data.results);
         })
-    },[])
+    }, [])
 
     return(
-        <div> 
+        <Container sx={{mt:20}}>
+            <Typography>Ultimos Lanzamientos</Typography>
+
             {lanzamientos.map((lanzamiento)=>(
-                <h1>{lanzamiento.title}</h1>
-            ))} 
-        </div>
+                <Box key={lanzamiento.id}>
+                    <Presentacion
+                        // imagen={}
+                        titulo= {lanzamiento.title}
+                    />
+                </Box>
+                
+            ))}
+            
+        </Container>
     )
 }
+
 
 export default UltimosLanzamientos;
