@@ -7,12 +7,12 @@ import {Link} from 'react-router-dom';
 
 const NavBar = ()=>{
     return(
-        <AppBar sx={{display:"flex", flexDirection:"row", bgcolor:"#111111"}}>
+        <AppBar sx={{display:"flex", flexDirection:"row", bgcolor:"#FF7E88"}}>
             <Container sx={{m:2}}>
-                <Link to="/"><Button variant="contained" sx={{m:1}}>Home</Button></Link>
-                <Link to="/ultimoslanzamientos"><Button variant="contained" sx={{m:1}}>Ultimos Lanzamientos</Button></Link>
-                <Link to="/populares"><Button variant="contained" sx={{m:1}}>Populares</Button></Link>
-                <Link to="/buscar"><Button variant="contained" sx={{m:1}}>Buscar</Button></Link>
+                <Link to="/"> <Button sx={{m:1, bgcolor:"#FF3B4B", color:"#FAFAFA"}}>Home</Button></Link>
+                <Link to="/ultimoslanzamientos"> <Button sx={{m:1, bgcolor:"#FF3B4B", color:"#FAFAFA"}}>Ultimos Lanzamientos</Button></Link>
+                <Link to="/populares"> <Button sx={{m:1, bgcolor:"#FF3B4B", color:"#FAFAFA"}}>Populares</Button></Link>
+                <Link to="/buscar"> <Button sx={{m:1, bgcolor:"#FF3B4B", color:"#FAFAFA"}}>Buscar</Button></Link>
             </Container>
 
         </AppBar>

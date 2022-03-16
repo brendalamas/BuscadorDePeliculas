@@ -22,7 +22,7 @@ const ListaPeliculas = ({titulo, url})=>{
     return(
       <Container sx={{display:"flex", flexDirection:"column"}}>
         <Box>
-            <Typography variant="h5" bgcolor="#1976D2" color="#ffffff" sx={{p:1}}> 
+            <Typography variant="h5" bgcolor="#FF7E88" color="#ffffff" sx={{p:1}}> 
                 {titulo}    
             </Typography>
 
