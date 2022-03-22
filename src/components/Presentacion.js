@@ -35,7 +35,7 @@ const Presentacion = ({imagen, titulo, link}) => {
                     textAlign="center">
                     {titulo}
                 </Typography>
-                <Box sx={{display:"flex", justifyContent:"center"}}> ver
+                <Box sx={{display:"flex", justifyContent:"center"}}>
                     <RemoveRedEyeIcon sx={{color:"#FF7E88", m:1.5}}/>
                 </Box>
             </Link>
