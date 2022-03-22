@@ -34,6 +34,13 @@
   <li>Custom Hooks</li>
 </ul>
 
+### ¿Que podes realizar con esta pagina?
+- Podes navegar por las secciones: Home, Ultimos Lanzamientos, Populares, Buscador
+- Podes hacer click en las tarjetas de las diferentes secciones y ver en detalle la informacion de cada una.
+- En las tarjetas de detalle se puede observar: Titulo, descripcion ......
+- Podes utilizar el buscador para ver una pelicula en especial
+
+
 ----------
 ### Para clonar el proyecto:
 <p> Ejecuta en la consola el siguiente comando 
