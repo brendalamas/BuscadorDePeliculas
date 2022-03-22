@@ -22,31 +22,31 @@ const Carrusel = () => {
                 slidesToScroll= {1}
             >
                 {principales.map((principal)=>(
-                    <ImageList sx={{overflow:"hidden"}}>
-                    <ImageListItem sx={{maxHeight:350}}>
-                        <img
-                            src={`https://image.tmdb.org/t/p/original/${principal.backdrop_path}`}
-                            srcSet={`https://image.tmdb.org/t/p/original/${principal.backdrop_path}`}
-                            alt={principal.title}
-                            loading="lazy"
-                        />
-                        <Box sx={{
-                            position:"absolute", 
-                            left:350, 
-                            bottom:40, 
-                            color: "black", 
-                            width:500,
-                            bgcolor:"#D1D1D1",
-                            opacity:0.7,
-                            p:1,
-                            textAlign:"center"
-                        }}> 
-                            <Typography variant="subtitle1" fontWeight="bold"> {principal.title} </Typography>
-                            <Typography variant="body2"> {principal.overview} </Typography>
-                            <Button>Ver mas</Button>
-                        </Box>
-                        
-                    </ImageListItem >
+                    <ImageList sx={{overflow:"hidden"}} key={principal.id}>
+                        <ImageListItem sx={{maxHeight:350}}>
+                            <img
+                                src={`https://image.tmdb.org/t/p/original/${principal.backdrop_path}`}
+                                srcSet={`https://image.tmdb.org/t/p/original/${principal.backdrop_path}`}
+                                alt={principal.title}
+                                loading="lazy"
+                            />
+                            <Box sx={{
+                                position:"absolute", 
+                                left:350, 
+                                bottom:40, 
+                                color: "black", 
+                                width:500,
+                                bgcolor:"#D1D1D1",
+                                opacity:0.7,
+                                p:1,
+                                textAlign:"center"
+                            }}> 
+                                <Typography variant="subtitle1" fontWeight="bold"> {principal.title} </Typography>
+                                <Typography variant="body2"> {principal.overview} </Typography>
+                                <Button>Ver mas</Button>
+                            </Box>
+                            
+                        </ImageListItem >
                     </ImageList> 
                 ))}
             </Slider>

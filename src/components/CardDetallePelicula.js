@@ -9,7 +9,6 @@ const CardDetallePelicula = () => {
     const params = useParams() 
     const [pelicula, setPelicula] = useState([])
 
-    console.log(params.idPelicula)
 
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/${params.idPelicula}?api_key=6e372c30d27676867cdbcfd7e00f4cf2&language=es`)
@@ -17,7 +16,7 @@ const CardDetallePelicula = () => {
         .then(data => setPelicula(data))
     }, [params.idPelicula])
 
-    console.log(pelicula)
+    console.log(pelicula);
 
     return (
         <Box sx={{mt:25, display:"flex", justifyContent:"center", p:0, height:700, width:1000, bgcolor:"#111111"}}>
@@ -35,8 +34,23 @@ const CardDetallePelicula = () => {
                     width={450} 
                     />
                     <Box sx={{display:"flex", flexDirection:"column", textAlign:"center", p:4}}>
-                        <Typography color="#FFFFFF" fontWeight="bold">{pelicula.title}</Typography>
-                        <Typography color="#FFFFFF" >{pelicula.overview}</Typography>
+                        <Box>
+                            <Typography color="#FFFFFF" fontWeight="bold">{pelicula.title}</Typography>
+                            <Typography color="#FFFFFF" >{pelicula.overview}</Typography>
+                        </Box>
+                        <Box>
+                            {/* <Typography color="#FFFFFF" fontWeight="bold">
+                                Produccion: {pelicula.production_companies[0].name} 
+                            </Typography>*/}
+
+                            <Typography color="#FFFFFF" fontWeight="bold">
+                                Fecha de lanzamiento: {pelicula.release_date}
+                            </Typography>
+                            <Typography color="#FFFFFF" fontWeight="bold">
+                                Promedio: {pelicula.vote_average}
+                            </Typography> 
+                        </Box>
+                        
                     </Box>
                     
                 </CardContent>
@@ -44,5 +58,6 @@ const CardDetallePelicula = () => {
         </Box>
     )
 }
+
 
 export default CardDetallePelicula;
