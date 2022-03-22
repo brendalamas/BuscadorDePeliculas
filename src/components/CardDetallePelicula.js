@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 
-import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
@@ -23,7 +22,7 @@ const CardDetallePelicula = () => {
     return (
         <Box sx={{mt:25, display:"flex", justifyContent:"center", p:0, height:700, width:1000, bgcolor:"#111111"}}>
             <Box sx={{
-                backgroundImage: "url(" + `https://image.tmdb.org/t/p/original/${pelicula.backdrop_path}`  + ")",
+                backgroundImage: `url(https://image.tmdb.org/t/p/original/${pelicula.backdrop_path})`,
                 backgroundPosition:"center",
                 backgroundSize: "cover",
                 display:"flex",
