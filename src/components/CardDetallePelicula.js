@@ -13,7 +13,7 @@ const CardDetallePelicula = () => {
     console.log(params.idPelicula)
 
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/${params.idPelicula}?api_key=6e372c30d27676867cdbcfd7e00f4cf2&language=es-AR`)
+        fetch(`https://api.themoviedb.org/3/movie/${params.idPelicula}?api_key=6e372c30d27676867cdbcfd7e00f4cf2&language=es`)
         .then(res => res.json())
         .then(data => setPelicula(data))
     }, [params.idPelicula])
@@ -21,15 +21,28 @@ const CardDetallePelicula = () => {
     console.log(pelicula)
 
     return (
-        <Container sx={{mt:25}}>
-            <Box>
-                <img src={`https://image.tmdb.org/t/p/w300/${pelicula.backdrop_path}`} alt="portada"/>
+        <Box sx={{mt:25, display:"flex", justifyContent:"center", p:0, height:700, width:1000, bgcolor:"#111111"}}>
+            <Box sx={{
+                backgroundImage: "url(" + `https://image.tmdb.org/t/p/original/${pelicula.backdrop_path}`  + ")",
+                backgroundPosition:"center",
+                backgroundSize: "cover",
+                display:"flex",
+                alignItems:"center",
+                opacity:0.5
+            }}>
+                <CardContent sx={{display:"flex"}}>
+                    <img src={`https://image.tmdb.org/t/p/original/${pelicula.backdrop_path}`} 
+                    alt={pelicula.backdrop_path} 
+                    width={450} 
+                    />
+                    <Box sx={{display:"flex", flexDirection:"column", textAlign:"center", p:4}}>
+                        <Typography color="#FFFFFF" fontWeight="bold">{pelicula.title}</Typography>
+                        <Typography color="#FFFFFF" >{pelicula.overview}</Typography>
+                    </Box>
+                    
+                </CardContent>
             </Box>
-            <CardContent>
-                <Typography>{pelicula.title}</Typography>
-                <Typography>{pelicula.overview}</Typography>
-            </CardContent>
-        </Container>
+        </Box>
     )
 }
 

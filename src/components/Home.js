@@ -9,8 +9,15 @@ const Home = ()=>{
         <Container sx={{mt:15, display:"flex", flexDirection:"column"}}>
             <Carrusel/>
             <Box sx={{display:"flex", mt:8}}>
-                <ListaPeliculas titulo="Peliculas Populares" url="popular"/>
-                <ListaPeliculas titulo="Peliculas Mejor Puntuadas" url="top_rated"/>
+                <ListaPeliculas 
+                titulo="Peliculas Populares" 
+                url="popular"
+                />
+                
+                <ListaPeliculas 
+                titulo="Peliculas Mejor Puntuadas" 
+                url="top_rated"
+                />
             </Box>
         </Container>
     )
