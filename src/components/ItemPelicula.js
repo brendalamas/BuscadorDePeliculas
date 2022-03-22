@@ -10,27 +10,23 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 const ItemPelicula = ({titulo, imagen, link}) => {
 
     return (
-        <Card sx={{display:"flex"}}>
-
-            <Box sx={{display:"flex", alignItems:"center"}}>
-                <CardMedia sx={{width:50}}
-                component="img"
-                height="50"
-                image={imagen}
-                alt="portada de imagen"
-                />
-            </Box>
-
-            <CardContent sx={{display:"flex", alignItems:"center"}}>
-                <Typography>{titulo}</Typography>
-                <Link to={`/carddetallepelicula/${link}`}>
+        <Link to={`/carddetallepelicula/${link}`} style={{textDecoration:"none"}}>
+            <Card sx={{display:"flex"}}>
+                <Box sx={{display:"flex", alignItems:"center"}}>
+                    <CardMedia sx={{width:50}}
+                    component="img"
+                    height="50"
+                    image={imagen}
+                    alt="portada de imagen"
+                    />
+                </Box>
+                <CardContent sx={{display:"flex", alignItems:"center"}}>
+                    <Typography>{titulo}</Typography>
                     <ArrowRightIcon/>
-                </Link>
-            </CardContent>
+                </CardContent>
+            </Card>
+        </Link>
 
-
-            
-        </Card>
     )
 }
 
