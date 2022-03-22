@@ -17,7 +17,7 @@ const Presentacion = ({imagen, titulo, link}) => {
             m:0.5, 
             bgcolor:"transparent"
         }}>
-            <Link to={`/carddetallepelicula/${link}`}>
+            <Link to={`/carddetallepelicula/${link}`} style={{textDecoration:"none"}}>
                 <ImageList sx={{ width: 222, height: 400, m:0}} cols={1} rowHeight={350}>
                     <ImageListItem>
                         <img
@@ -38,8 +38,6 @@ const Presentacion = ({imagen, titulo, link}) => {
                 <Box sx={{display:"flex", justifyContent:"center"}}>
                     <RemoveRedEyeIcon sx={{color:"#FF7E88", m:1.5}}/>
                 </Box>
-
-                
             </Link>
 
         </Card>

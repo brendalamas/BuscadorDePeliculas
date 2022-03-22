@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -43,7 +44,10 @@ const Carrusel = () => {
                             }}> 
                                 <Typography variant="subtitle1" fontWeight="bold"> {principal.title} </Typography>
                                 <Typography variant="body2"> {principal.overview} </Typography>
-                                <Button>Ver mas</Button>
+                                <Link to={`/carddetallepelicula/${principal.id}`}>
+                                    <Button>Ver mas</Button>
+                                </Link>
+                                
                             </Box>
                             
                         </ImageListItem >

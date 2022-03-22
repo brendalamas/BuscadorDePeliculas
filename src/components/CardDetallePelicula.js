@@ -39,10 +39,9 @@ const CardDetallePelicula = () => {
                             <Typography color="#FFFFFF" >{pelicula.overview}</Typography>
                         </Box>
                         <Box>
-                            {/* <Typography color="#FFFFFF" fontWeight="bold">
+                            {/* ERRROORRRR<Typography color="#FFFFFF" fontWeight="bold">
                                 Produccion: {pelicula.production_companies[0].name} 
                             </Typography>*/}
-
                             <Typography color="#FFFFFF" fontWeight="bold">
                                 Fecha de lanzamiento: {pelicula.release_date}
                             </Typography>
@@ -50,9 +49,7 @@ const CardDetallePelicula = () => {
                                 Promedio: {pelicula.vote_average}
                             </Typography> 
                         </Box>
-                        
                     </Box>
-                    
                 </CardContent>
             </Box>
         </Box>
