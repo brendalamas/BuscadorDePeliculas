@@ -4,6 +4,7 @@ import Card from "@mui/material/Card";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 
 const Presentacion = ({imagen, titulo, link}) => {
@@ -17,6 +18,14 @@ const Presentacion = ({imagen, titulo, link}) => {
                 m:0.5, 
                 bgcolor:"transparent"
             }}>
+        <Card
+        sx={{
+            display:"flex", 
+            flexDirection:"column", 
+            alignItems:"center", 
+            m:0.5, 
+            bgcolor:"transparent"
+        }}>
                 <ImageList sx={{ width: 222, height: 400, m:0}} cols={1} rowHeight={350}>
                     <ImageListItem>
                         <img
@@ -33,8 +42,17 @@ const Presentacion = ({imagen, titulo, link}) => {
                 </Typography>
                 <RemoveRedEyeIcon sx={{color:"#FF7E88", m:1.5}}/>
             </Card>
-        </Link>
-
+                <Typography 
+                    variant="subtitle1" 
+                    color="#FF7E88" 
+                    fontWeight="bold" 
+                    textAlign="center">
+                    {titulo}
+                </Typography>
+                <Box sx={{display:"flex", justifyContent:"center"}}>
+                    <RemoveRedEyeIcon sx={{color:"#FF7E88", m:1.5}}/>
+                </Box>
+            </Link>
     )
 }
 
