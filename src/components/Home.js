@@ -13,7 +13,6 @@ const Home = ()=>{
                 titulo="Peliculas Populares" 
                 url="popular"
                 />
-                
                 <ListaPeliculas 
                 titulo="Peliculas Mejor Puntuadas" 
                 url="top_rated"
