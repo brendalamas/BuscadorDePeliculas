@@ -1,17 +1,27 @@
 import { useState, useEffect } from "react"
+import {
+    urlBase,
+    apiKey,
+    queryParamLenguaje,
+    definirURL,
+  } from "../utils/variables";
 
-const useFetchPeliculas = (categoria) =>{
+const useFetchPeliculas = (categoria, tipo, search) =>{
     const [pelicula, setPelicula] = useState([])
 
+    const url =`${urlBase}${definirURL(categoria, tipo, search)}?${apiKey}${queryParamLenguaje}=es`
+
     useEffect(()=>{
-        fetch(`https://api.themoviedb.org/3/movie/${categoria}?api_key=6e372c30d27676867cdbcfd7e00f4cf2&language=es-ES&page=1`)
+        fetch(url)
         .then(res=>res.json())
         .then(data=>{
             setPelicula(data.results)
         })
-    }, [categoria])
+    }, [])
 
-    return pelicula
+    return {
+        pelicula:pelicula
+    }
 }
 
 export default useFetchPeliculas;

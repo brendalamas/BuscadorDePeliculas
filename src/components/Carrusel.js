@@ -12,7 +12,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
 const Carrusel = () => {
-    const principales = useFetchPeliculas("now_playing")
+    const {pelicula: principales} = useFetchPeliculas("now_playing","movie")
     return(
         <div>
             <Slider 
