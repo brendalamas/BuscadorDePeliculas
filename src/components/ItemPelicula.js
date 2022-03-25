@@ -1,28 +1,25 @@
 import { Link } from 'react-router-dom';
-
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 const ItemPelicula = ({titulo, imagen, link}) => {
-
     return (
         <Link to={`/carddetallepelicula/${link}`} style={{textDecoration:"none"}}>
-            <Card sx={{display:"flex"}}>
-                <Box sx={{display:"flex", alignItems:"center"}}>
-                    <CardMedia sx={{width:50}}
+            <Card sx={{display:"flex", flexDirection:"column", alignItems:"center", bgcolor:"transparent", m:1}}>
+                <Box sx={{display:"flex"}}>
+                    <CardMedia sx={{width:250}}
                     component="img"
-                    height="50"
                     image={imagen}
-                    alt="portada de imagen"
+                    alt={titulo}
                     />
                 </Box>
                 <CardContent sx={{display:"flex", alignItems:"center"}}>
-                    <Typography>{titulo}</Typography>
-                    <ArrowRightIcon/>
+                    <Typography variant="subtitle1" fontWeight= "bold">
+                        {titulo}
+                    </Typography>
                 </CardContent>
             </Card>
         </Link>

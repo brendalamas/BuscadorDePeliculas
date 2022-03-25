@@ -1,31 +1,33 @@
 import Typography  from "@mui/material/Typography";
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-
 import Presentacion from "./Presentacion"
 import useFetchPeliculas from "../hook/useFetchPeliculas";
+import { cortarArrayPeliculas } from "../utils/variables";
 
-const Populares = ()=>{
-    const populares = useFetchPeliculas ("popular")
+const Peliculas = ()=>{
+    const { pelicula: peliculas } = useFetchPeliculas('popular', 'movie');
 
+    console.log(peliculas)
     return(
         <Container sx={{mt:20}}>
             <Typography variant="h4" textAlign="center" color="#FF7E88" fontWeight="bold" sx={{mb:5}}>
-                POPULARES
+                PELICULAS POPULARES
             </Typography>
+            
             <Box sx={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
-                {populares.map((popular)=>(
+                {cortarArrayPeliculas(peliculas).map((pelicula)=>(
                     <Presentacion
-                        key={popular.id}
-                        imagen={`https://image.tmdb.org/t/p/original/${popular.poster_path}`}
-                        titulo= {popular.title}
-                        link={popular.id}
+                        key={pelicula.id}
+                        imagen={`https://image.tmdb.org/t/p/original/${pelicula.poster_path}`}
+                        titulo= {pelicula.title}
+                        link={pelicula.id}
                     />
                 ))}
             </Box>
-
         </Container>
     )
 }
 
-export default Populares;
+
+export default Peliculas;

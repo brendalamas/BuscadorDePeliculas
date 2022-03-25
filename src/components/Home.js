@@ -7,10 +7,14 @@ import { cortarArrayPeliculas } from "../utils/variables";
 
 const Home = ()=>{
     const { pelicula } = useFetchPeliculas('popular', 'movie');
-    const { pelicula: peliculasMejorPunteadas } = useFetchPeliculas('top_rated', 'movie');
+    const { pelicula: peliculasMejorPuntuadas } = useFetchPeliculas('top_rated', 'movie');
 
   const { pelicula: series } = useFetchPeliculas(
     'popular',
+    'tv',
+  );
+  const { pelicula: seriesMejorPuntuadas } = useFetchPeliculas(
+    'top_rated',
     'tv',
   );
 
@@ -18,7 +22,7 @@ const Home = ()=>{
         <Container sx={{mt:15, display:"flex", flexDirection:"column"}}>
             <Carrusel/>
             <Box sx={{display:"flex", flexDirection:"column", mt:8}}>
-                <Box sx={{display:"flex"}}>
+                <Box sx={{display:"flex", flexDirection:"column"}}>
                     <Listas 
                     titulo="Peliculas Populares" 
                     pelicula={cortarArrayPeliculas(pelicula)}
@@ -26,14 +30,17 @@ const Home = ()=>{
                     />
                     <Listas 
                     titulo="Peliculas Mejor Puntuadas" 
-                    pelicula={cortarArrayPeliculas(peliculasMejorPunteadas)}
+                    pelicula={cortarArrayPeliculas(peliculasMejorPuntuadas)}
                     isTv={false}
                     />
-                </Box>
-                <Box sx={{display:"flex"}}>
                     <Listas 
                     titulo="Series Populares"
                     pelicula={cortarArrayPeliculas(series)}
+                    isTv={true}
+                    />
+                    <Listas 
+                    titulo="Series Mejor Puntuadas"
+                    pelicula={cortarArrayPeliculas(seriesMejorPuntuadas)}
                     isTv={true}
                     />
                 </Box>

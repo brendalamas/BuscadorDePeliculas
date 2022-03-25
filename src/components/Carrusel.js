@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
+
 const Carrusel = () => {
     const {pelicula: principales} = useFetchPeliculas("now_playing","movie")
     return(
@@ -18,9 +19,11 @@ const Carrusel = () => {
             <Slider 
                 dots={true}
                 infinite= {true}
-                speed= {500}
-                slidesToShow= {1}
+                slidesToShow={1}
                 slidesToScroll= {1}
+                autoplay= {true}
+                autoplaySpeed= {2000}
+                pauseOnHover= {true}
             >
                 {principales.map((principal)=>(
                     <ImageList sx={{overflow:"hidden"}} key={principal.id}>
@@ -35,9 +38,9 @@ const Carrusel = () => {
                                 position:"absolute", 
                                 left:350, 
                                 bottom:40, 
-                                color: "black", 
+                                color: "#FFFFFF", 
                                 width:500,
-                                bgcolor:"#D1D1D1",
+                                bgcolor:"#111111",
                                 opacity:0.7,
                                 p:1,
                                 textAlign:"center"
@@ -47,9 +50,7 @@ const Carrusel = () => {
                                 <Link to={`/carddetallepelicula/${principal.id}`}>
                                     <Button>Ver mas</Button>
                                 </Link>
-                                
                             </Box>
-                            
                         </ImageListItem >
                     </ImageList> 
                 ))}

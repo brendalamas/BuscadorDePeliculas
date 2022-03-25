@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import Home from "./components/Home" 
-import UltimosLanzamientos from "./components/UltimosLanzamientos"
-import Populares from "./components/Populares"
+import Peliculas from "./components/Peliculas"
+import Series from "./components/Series"
 import Buscar from "./components/Buscar"
 import ErrorNoEncontrado from "./components/ErrorNoEncontrado"
 
@@ -20,8 +20,8 @@ const App = () => {
         <Route path='*' element={<ErrorNoEncontrado/>}/>
         <Route path='/' element={<Home/>}/>
 
-        <Route path='/ultimoslanzamientos' element={<UltimosLanzamientos/>}/>
-        <Route path='/populares' element={<Populares/>}/>
+        <Route path='/peliculas' element={<Peliculas/>}/>
+        <Route path='/series' element={<Series/>}/>
         <Route path='/buscar' element={<Buscar/>}/>
 
         <Route path='/carddetallepelicula/:idPelicula' element={<CardDetallePelicula/>}/>

@@ -10,24 +10,27 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Footer = () => {
     return (
-        <Container sx={{bgcolor:"#FF7E88", mt:10}}>
+        <Container sx={{bgcolor:"#111111", mt:10}}>
             <CardContent sx={{display:"flex", justifyContent:"space-around", alignItems:"center"}}>
-
-                <Box sx={{textAlign:"center", color:"#1976D2"}}>
-                    <Typography variant="subtitle1" color="#FAFAFA" fontWeight="bold"> 🎥 Movie App </Typography>
-                    <Typography  variant="subtitle1" color="#FAFAFA" fontWeight="bold"> Hecho con ♡ por Brenda Lamas</Typography>
+                <Box sx={{textAlign:"center"}}>
+                    <Typography variant="subtitle1" color="#94131d" fontWeight="bold"> 
+                        🎥 Movie App 
+                    </Typography>
+                    <Typography  variant="subtitle1" color="#94131d" fontWeight="bold"> 
+                        Hecho con ♡ por Brenda Lamas
+                    </Typography>
                 </Box>
                 <Box>
                     <Link href="https://github.com/brendalamas" underline="none" sx={{p:2}}>
-                        <GitHubIcon sx={{fontSize:35, color:"#FAFAFA"}}/>
+                        <GitHubIcon sx={{fontSize:35, color:"#94131d"}}/>
                     </Link>
 
                     <Link href="https://mail.google.com/mail/u/0/?tab=rm&ogbl" underline="none" sx={{p:2}}>
-                        <MailIcon sx={{fontSize:35, color:"#FAFAFA"}}/>
+                        <MailIcon sx={{fontSize:35, color:"#94131d"}}/>
                     </Link>
 
                     <Link href="https://www.linkedin.com/in/brenda-lamas-597b79145/" underline="none" sx={{p:2}}>
-                        <LinkedInIcon sx={{fontSize:35, color:"#FAFAFA"}}/>
+                        <LinkedInIcon sx={{fontSize:35, color:"#94131d"}}/>
                     </Link>
                 </Box>
 

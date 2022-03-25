@@ -10,10 +10,10 @@ const ListaPeliculas = ({titulo, pelicula, isTv})=>{
     return(
       <Container sx={{display:"flex", flexDirection:"column"}}>
         <Box>
-            <Typography variant="h5" bgcolor="#FF7E88" color="#ffffff" sx={{p:1}}> 
+            <Typography variant="h5" bgcolor="#111111" color="#94131d" sx={{p:1}}> 
                 {titulo}    
             </Typography>
-            <Box sx={{p:1}}>
+            <Box sx={{p:1, display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
                 {pelicula && pelicula.map(peli => (
                     <Box key={peli.id}>
                         <ItemPelicula
