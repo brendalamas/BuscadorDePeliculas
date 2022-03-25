@@ -10,14 +10,6 @@ import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 const Presentacion = ({imagen, titulo, link}) => {
     return (
         <Link to={`/carddetallepelicula/${link}`} style={{textDecoration:"none"}}>
-            <Card
-            sx={{
-                display:"flex", 
-                flexDirection:"column", 
-                alignItems:"center", 
-                m:0.5, 
-                bgcolor:"transparent"
-            }}>
         <Card
         sx={{
             display:"flex", 

@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react"
 import ItemPelicula from "./ItemPelicula";
 
 import Container from '@mui/material/Container';
@@ -7,31 +6,19 @@ import Typography from '@mui/material/Typography';
 
 
 
-const ListaPeliculas = ({titulo, url})=>{
-    const [peliculas, setPeliculas] = useState([]);
-
-    useEffect ( () =>{
-        fetch(`https://api.themoviedb.org/3/movie/${url}?api_key=6e372c30d27676867cdbcfd7e00f4cf2&language=es-AR&page=1`)
-        .then(res => res.json())
-        .then(data =>{
-            console.log(data.results);
-            setPeliculas(data.results);
-        })
-    },[url])
-
+const ListaPeliculas = ({titulo, pelicula, isTv})=>{
     return(
       <Container sx={{display:"flex", flexDirection:"column"}}>
         <Box>
             <Typography variant="h5" bgcolor="#FF7E88" color="#ffffff" sx={{p:1}}> 
                 {titulo}    
             </Typography>
-
             <Box sx={{p:1}}>
-                {peliculas.map(pelicula => (
-                    <Box key={pelicula.id}>
+                {pelicula && pelicula.map(peli => (
+                    <Box key={peli.id}>
                         <ItemPelicula
-                            imagen={`https://image.tmdb.org/t/p/w300/${pelicula.backdrop_path}`}
-                            titulo={pelicula.title}
+                            imagen={`https://image.tmdb.org/t/p/w300/${peli.backdrop_path}`}
+                            titulo={isTv ? peli.name : peli.title}
                             link={pelicula.id}
                         />
                     </Box>
