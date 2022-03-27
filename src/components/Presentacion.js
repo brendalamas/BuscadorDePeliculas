@@ -28,8 +28,12 @@ const Presentacion = ({imagen, titulo, link}) => {
                         />
                     </ImageListItem>
                 </ImageList>
-                <Typography variant="subtitle1" color="#FF7E88" 
-                fontWeight="bold" textAlign="center">
+                <Typography 
+                    variant="subtitle1" 
+                    color="#FF7E88" 
+                    fontWeight="bold" 
+                    textAlign="center"
+                >
                     {titulo}
                 </Typography>
                 <RemoveRedEyeIcon sx={{color:"#FF7E88", m:1.5}}/>

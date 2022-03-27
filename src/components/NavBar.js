@@ -14,7 +14,7 @@ const NavBar = ()=>{
             flexDirection:"row", 
             justifyContent:"space-between", 
             alignItems:"center", 
-            bgcolor:"#94131d",
+            bgcolor:"#7F020C",
             pl:2, pr:3}} >
             <Box sx={{display:"flex", justifyContent:"flex-start"}}>
                 <Link to="/" style={{textDecoration:"none"}}> 
