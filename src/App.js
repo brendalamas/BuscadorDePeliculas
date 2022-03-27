@@ -9,7 +9,7 @@ import ErrorNoEncontrado from "./components/ErrorNoEncontrado"
 
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
-import CardDetallePelicula from './components/CardDetallePelicula';
+import PeliculaCategoria from './components/PeliculaCategoria';
 
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
         <Route path='/series' element={<Series/>}/>
         <Route path='/buscar' element={<Buscar/>}/>
 
-        <Route path='/carddetallepelicula/:idPelicula' element={<CardDetallePelicula/>}/>
+        <Route path='/peliculacategoria/:idCategoria' element={<PeliculaCategoria/>}/>
 
       </Routes>
       <Footer/>

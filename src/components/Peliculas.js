@@ -1,30 +1,30 @@
-import Typography  from "@mui/material/Typography";
 import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
-import Presentacion from "./Presentacion"
+import PeliculasSecciones from "./PeliculasSecciones"
 import useFetchPeliculas from "../hook/useFetchPeliculas";
 import { cortarArrayPeliculas } from "../utils/variables";
 
 const Peliculas = ()=>{
-    const { pelicula: peliculas } = useFetchPeliculas('popular', 'movie');
+    const { pelicula: peliculasPopulares } = useFetchPeliculas('popular', 'movie');
+    const { pelicula: peliculasMejorCriticas } = useFetchPeliculas('top_rated', 'movie');
+    const { pelicula: peliculasAEstrenarse } = useFetchPeliculas('upcoming', 'movie');
 
-    console.log(peliculas)
     return(
         <Container sx={{mt:20}}>
-            <Typography variant="h4" textAlign="center" color="#FF7E88" fontWeight="bold" sx={{mb:5}}>
-                PELICULAS POPULARES
-            </Typography>
-            
-            <Box sx={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
-                {cortarArrayPeliculas(peliculas).map((pelicula)=>(
-                    <Presentacion
-                        key={pelicula.id}
-                        imagen={`https://image.tmdb.org/t/p/original/${pelicula.poster_path}`}
-                        titulo= {pelicula.title}
-                        link={pelicula.id}
-                    />
-                ))}
-            </Box>
+            <PeliculasSecciones
+            peliculasSlice= {cortarArrayPeliculas(peliculasPopulares)}
+            titulo= "Peliculas Populares"
+            categoria="popular"
+            />
+            <PeliculasSecciones
+            peliculasSlice= {cortarArrayPeliculas(peliculasMejorCriticas)}
+            titulo= "Peliculas con mejores criticas"
+            categoria="top_rated"
+            />
+            <PeliculasSecciones
+            peliculasSlice= {cortarArrayPeliculas(peliculasAEstrenarse)}
+            titulo= "Peliculas a estrenarse"
+            categoria="upcoming"
+            />
         </Container>
     )
 }
