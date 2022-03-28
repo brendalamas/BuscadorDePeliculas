@@ -18,9 +18,8 @@ const PeliculasSecciones = ({peliculasSlice, titulo, categoria}) => {
             </Box>            
             <Box sx={{display:"flex", justifyContent:"flex-start", mt:3, mb:3}}>
                 {peliculasSlice.map((pelicula)=>(
-                    <Box>
+                    <Box key={pelicula.id}>
                         <Presentacion
-                        key={pelicula.id}
                         imagen={`https://image.tmdb.org/t/p/original/${pelicula.poster_path}`}
                         titulo= {pelicula.title}
                         link={pelicula.id}
