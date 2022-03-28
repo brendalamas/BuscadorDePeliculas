@@ -1,10 +1,7 @@
 import ItemPelicula from "./ItemPelicula";
-
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-
-
 
 const ListaPeliculas = ({titulo, pelicula, isTv})=>{
     return(
@@ -14,7 +11,7 @@ const ListaPeliculas = ({titulo, pelicula, isTv})=>{
                 {titulo}    
             </Typography>
             <Box sx={{p:1, display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
-                {pelicula && pelicula.map(peli => (
+                {pelicula.map(peli => (
                     <Box key={peli.id}>
                         <ItemPelicula
                             imagen={`https://image.tmdb.org/t/p/w300/${peli.backdrop_path}`}

@@ -13,6 +13,7 @@ import PeliculaCategoria from './components/PeliculaCategoria';
 
 
 const App = () => {
+  
   return (
     <BrowserRouter>
       <NavBar/>
@@ -24,7 +25,7 @@ const App = () => {
         <Route path='/series' element={<Series/>}/>
         <Route path='/buscar' element={<Buscar/>}/>
 
-        <Route path='/peliculacategoria/:idCategoria' element={<PeliculaCategoria/>}/>
+        <Route path='/peliculacategoria/:idDetalle' element={<PeliculaCategoria/>}/>
 
       </Routes>
       <Footer/>

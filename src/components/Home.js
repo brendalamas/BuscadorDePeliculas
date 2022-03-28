@@ -9,40 +9,34 @@ const Home = ()=>{
     const { pelicula } = useFetchPeliculas('popular', 'movie');
     const { pelicula: peliculasMejorPuntuadas } = useFetchPeliculas('top_rated', 'movie');
 
-  const { pelicula: series } = useFetchPeliculas(
-    'popular',
-    'tv',
-  );
-  const { pelicula: seriesMejorPuntuadas } = useFetchPeliculas(
-    'top_rated',
-    'tv',
-  );
+  const { pelicula: series } = useFetchPeliculas('popular','tv');
+  const { pelicula: seriesMejorPuntuadas } = useFetchPeliculas('top_rated','tv');
 
     return(
         <Container sx={{mt:15, display:"flex", flexDirection:"column"}}>
             <Carrusel/>
             <Box sx={{display:"flex", flexDirection:"column", mt:8}}>
                 <Box sx={{display:"flex", flexDirection:"column"}}>
-                    <Listas 
+                  <Listas 
                     titulo="Peliculas Populares" 
                     pelicula={cortarArrayPeliculas(pelicula)}
                     isTv={false}
-                    />
-                    <Listas 
+                  />
+                  <Listas 
                     titulo="Peliculas Mejor Puntuadas" 
                     pelicula={cortarArrayPeliculas(peliculasMejorPuntuadas)}
                     isTv={false}
-                    />
-                    <Listas 
+                  />
+                  <Listas 
                     titulo="Series Populares"
                     pelicula={cortarArrayPeliculas(series)}
                     isTv={true}
-                    />
-                    <Listas 
+                  />
+                  <Listas 
                     titulo="Series Mejor Puntuadas"
                     pelicula={cortarArrayPeliculas(seriesMejorPuntuadas)}
                     isTv={true}
-                    />
+                  />
                 </Box>
             </Box>
         </Container>

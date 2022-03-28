@@ -1,10 +1,8 @@
 import {Link} from 'react-router-dom';
-
 import Card from "@mui/material/Card";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 
 const Presentacion = ({imagen, titulo, link}) => {
