@@ -10,6 +10,7 @@ import ErrorNoEncontrado from "./components/ErrorNoEncontrado"
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
 import PeliculaCategoria from './components/PeliculaCategoria';
+import SerieCategoria from './components/SerieCategoria';
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
         <Route path='/buscar' element={<Buscar/>}/>
 
         <Route path='/peliculacategoria/:idDetalle' element={<PeliculaCategoria/>}/>
+        <Route path='/seriecategoria/:idSerie' element={<SerieCategoria/>}/>
 
       </Routes>
       <Footer/>

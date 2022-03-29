@@ -2,9 +2,7 @@ import {Link} from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-
 import useFetchPeliculas from "../hook/useFetchPeliculas";
-
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Typography from '@mui/material/Typography';
@@ -34,13 +32,11 @@ const Carrusel = () => {
                                 alt={principal.title}
                                 loading="lazy"
                             />
-                            <Box sx={{
+                            <Box color = "ffffff" bgcolor="#111111" sx={{
                                 position:"absolute", 
                                 left:350, 
                                 bottom:40, 
-                                color: "#FFFFFF", 
                                 width:500,
-                                bgcolor:"#111111",
                                 opacity:0.7,
                                 p:1,
                                 textAlign:"center"

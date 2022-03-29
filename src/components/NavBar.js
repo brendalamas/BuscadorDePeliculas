@@ -10,12 +10,12 @@ import LogoBL from "../img/logo.jpeg"
 const NavBar = ()=>{
     return(
         <AppBar sx={{
-            display:"flex", 
-            flexDirection:"row", 
-            justifyContent:"space-between", 
-            alignItems:"center", 
-            bgcolor:"#7F020C",
-            pl:2, pr:3}} >
+        display:"flex", 
+        flexDirection:"row", 
+        justifyContent:"space-between", 
+        alignItems:"center", 
+        bgcolor:"#7F020C",
+        pl:2, pr:3}}>
             <Box sx={{display:"flex", justifyContent:"flex-start"}}>
                 <Link to="/" style={{textDecoration:"none"}}> 
                     <CardMedia sx={{width:100}}

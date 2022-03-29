@@ -2,6 +2,5 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom right, #8b000b, #111111);
-
+    background-color: #7F020C;
 }
