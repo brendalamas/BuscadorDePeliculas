@@ -1,34 +1,32 @@
-import Typography  from "@mui/material/Typography";
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
-import Presentacion from "./Presentacion"
 import useFetchPeliculas from "../hook/useFetchPeliculas";
 import { cortarArrayPeliculas } from "../utils/variables";
+import Container from '@mui/material/Container';
+import SeriesSecciones from "./SeriesSecciones";
 
-const Populares = ()=>{
-    const { pelicula: series } = useFetchPeliculas(
-        'popular',
-        'tv',
-      );
+const Series = ()=>{
+    const { pelicula: seriesPopulares } = useFetchPeliculas('popular','tv');
+    const { pelicula: seriesConMejoresCriticas} = useFetchPeliculas('top_rated','tv');
+    const { pelicula: seriesAlAire } = useFetchPeliculas('on_the_air','tv');
 
     return(
         <Container sx={{mt:20}}>
-            <Typography variant="h4" textAlign="center" color="#FF7E88" fontWeight="bold" sx={{mb:5}}>
-                SERIES POPULARES
-            </Typography>
-            <Box sx={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
-                {cortarArrayPeliculas(series).map((serie)=>(
-                    <Presentacion
-                        key={serie.id}
-                        imagen={`https://image.tmdb.org/t/p/original/${serie.poster_path}`}
-                        titulo= {serie.title}
-                        link={serie.id}
-                    />
-                ))}
-            </Box>
-
+            <SeriesSecciones
+            seriesSlice= {cortarArrayPeliculas(seriesPopulares)}
+            titulo= "Series Populares"
+            categoria="popular"
+            />
+            <SeriesSecciones
+            seriesSlice= {cortarArrayPeliculas(seriesConMejoresCriticas)}
+            titulo= "Series con mejores criticas"
+            categoria="top_rated"
+            />
+            <SeriesSecciones
+            seriesSlice= {cortarArrayPeliculas(seriesAlAire)}
+            titulo= "Series a estrenarse"
+            categoria="on_the_air"
+            />
         </Container>
     )
 }
 
-export default Populares;
+export default Series;
