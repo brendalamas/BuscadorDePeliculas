@@ -11,6 +11,7 @@ import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
 import PeliculaCategoria from './components/PeliculaCategoria';
 import SerieCategoria from './components/SerieCategoria';
+import CardDetallePersonajes from './components/CardDetallePersonajes';
 
 
 const App = () => {
@@ -28,7 +29,7 @@ const App = () => {
 
         <Route path='/peliculacategoria/:idDetalle' element={<PeliculaCategoria/>}/>
         <Route path='/seriecategoria/:idSerie' element={<SerieCategoria/>}/>
-
+        <Route path='/carddetallepersonajes/:idPersonajes' element={<CardDetallePersonajes/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

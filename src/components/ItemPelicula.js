@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 
 const ItemPelicula = ({titulo, imagen, link}) => {
     return (
-        <Link to={`/carddetallepelicula/${link}`} style={{textDecoration:"none"}}>
+        <Link to={`/carddetallepersonajes/${link}`} style={{textDecoration:"none"}}>
             <Card sx={{display:"flex", flexDirection:"column", alignItems:"center", bgcolor:"transparent", m:1}}>
                 <Box sx={{display:"flex"}}>
                     <CardMedia sx={{width:250}}
