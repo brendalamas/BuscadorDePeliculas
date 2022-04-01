@@ -16,7 +16,7 @@ const ListaPeliculas = ({titulo, pelicula, isTv})=>{
                         <ItemPelicula
                             imagen={`https://image.tmdb.org/t/p/w300/${peli.backdrop_path}`}
                             titulo={isTv ? peli.name : peli.title}
-                            link={pelicula.id}
+                            link={peli.id}
                         />
                     </Box>
                 ))}
