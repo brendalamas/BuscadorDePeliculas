@@ -38,7 +38,7 @@ const NavBar = ()=>{
                 {/* aca tengo q poner las series!! y adentro las series (?) mejor puntuadas y ultimos lanzamientos (?)*/}
                     <TvIcon sx={{color:"#111111", fontSize:35}}/>
                 </Link>
-                <Link to="/buscar" style={{textDecoration:"none"}}> 
+                <Link to="/busqueda" style={{textDecoration:"none"}}> 
                     <SearchIcon sx={{color:"#111111", fontSize:35}}/> 
                 </Link>
             </Box>

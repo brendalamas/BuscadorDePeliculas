@@ -1,14 +1,9 @@
-import { useParams  } from "react-router-dom";
-import useFetchPeliculas from "../hook/useFetchPeliculas";
+import { useSearchParams } from "react-router-dom"
+import useFetchPeliculas from "../hook/useFetchPeliculas"
+
 
 const CardDetallePersonajes = () =>{
-    const params = useParams() 
-    console.log(params);
-
-    const {pelicula} = useFetchPeliculas(`${params.idPersonajes}`, 'movie');
-
-    console.log(pelicula)
-
+    const {peliculas} = useFetchPeliculas()
     return (
         <div> hola </div>
     )

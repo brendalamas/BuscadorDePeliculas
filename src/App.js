@@ -4,7 +4,7 @@ import './App.css';
 import Home from "./components/Home" 
 import Peliculas from "./components/Peliculas"
 import Series from "./components/Series"
-import Buscar from "./components/Buscar"
+import Busqueda from "./components/Busqueda"
 import ErrorNoEncontrado from "./components/ErrorNoEncontrado"
 
 import NavBar from "./components/NavBar"
@@ -25,7 +25,7 @@ const App = () => {
 
         <Route path='/peliculas' element={<Peliculas/>}/>
         <Route path='/series' element={<Series/>}/>
-        <Route path='/buscar' element={<Buscar/>}/>
+        <Route path='/busqueda' element={<Busqueda/>}/>
 
         <Route path='/peliculacategoria/:idDetalle' element={<PeliculaCategoria/>}/>
         <Route path='/seriecategoria/:idSerie' element={<SerieCategoria/>}/>
