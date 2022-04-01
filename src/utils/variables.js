@@ -7,3 +7,5 @@ export const cortarArrayPeliculas = array => array.slice(0, 4);
 
 export const definirURL = (categoria, tipo, busqueda) =>
   busqueda ? `${categoria}/${tipo}/${busqueda}` : `${tipo}/${categoria}`;
+
+export const definirURLDetalles = (categoria, id) => `${categoria}/${id}`;

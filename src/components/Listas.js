@@ -2,6 +2,7 @@ import ItemPelicula from "./ItemPelicula";
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import imagenNotFount from "../img/notFound.png"
 
 const ListaPeliculas = ({titulo, pelicula, isTv})=>{
     return(
@@ -14,7 +15,8 @@ const ListaPeliculas = ({titulo, pelicula, isTv})=>{
                 {pelicula.map(peli => (
                     <Box key={peli.id}>
                         <ItemPelicula
-                            imagen={`https://image.tmdb.org/t/p/w300/${peli.backdrop_path}`}
+                            imagen={peli.poster_path ? `https://image.tmdb.org/t/p/w300/${peli.poster_path}`
+                            : imagenNotFount}
                             titulo={isTv ? peli.name : peli.title}
                             link={peli.id}
                         />

@@ -12,7 +12,7 @@ const ItemPelicula = ({titulo, imagen, link}) => {
                 <Box sx={{display:"flex"}}>
                     <CardMedia sx={{width:250}}
                     component="img"
-                    image={imagen}
+                    image = {imagen}
                     alt={titulo}
                     />
                 </Box>

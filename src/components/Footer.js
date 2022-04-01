@@ -10,7 +10,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Footer = () => {
     return (
-        <Container sx={{bgcolor:"#111111", mt:10}}>
+        <Box sx={{bgcolor:"#111111"}}>
             <CardContent sx={{display:"flex", justifyContent:"space-around", alignItems:"center"}}>
                 <Box sx={{textAlign:"center"}}>
                     <Typography variant="subtitle1" color="#94131d" fontWeight="bold"> 
@@ -35,7 +35,7 @@ const Footer = () => {
                 </Box>
 
             </CardContent>
-        </Container>
+        </Box>
     )
 }
 
