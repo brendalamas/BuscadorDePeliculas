@@ -16,7 +16,6 @@ const useFetchPeliculas = (categoria, tipo, search) =>{
         .then(res=>res.json())
         .then(data=>{
             setPelicula(data.results)
-            console.log(data.results)
         })
     }, [url])
 
