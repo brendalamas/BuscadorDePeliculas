@@ -1,11 +1,16 @@
+import { useEffect, useState } from 'react';
+import {useSearchParams} from "react-router-dom";
 import Paper from '@mui/material/Paper';
 import Container from '@mui/material/Container';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
-import { useEffect, useState } from 'react';
-import {useSearchParams} from "react-router-dom"
-
+import Card from '@mui/material/Card';
+import Box from '@mui/material/Box';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import CardContent from '@mui/material/CardContent';
+import imagenNotFount from "../img/notFound.png"
 const Busqueda = () => {
 
     const [searchParams, setSearchParams] = useSearchParams({
@@ -24,9 +29,9 @@ const Busqueda = () => {
     },[busqueda])
 
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault()
-    // }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
     
     const handleChange = (e) => {
         setSearchParams({
@@ -37,13 +42,13 @@ const Busqueda = () => {
     const handleClick = () => {
         setBusqueda(searchParams.get("query"))
     }
-    
+
     return(
-        <Container sx={{display:"flex", justifyContent:"center", mt:15}}>
+        <Container sx={{display:"flex", flexDirection:"column", alignItems:"center", mt:15}}>
             <Paper
                 component="form"
-                sx={{ p: '2px 4px', display: 'flex',width: 400}}
-                // onClick={handleSubmit}
+                sx={{ p: '2px 4px', display: 'flex', width: 400}}
+                onClick={handleSubmit}
                 >
                 <InputBase
                     sx={{ ml: 1, flex: 1 }}
@@ -56,13 +61,28 @@ const Busqueda = () => {
                     <SearchIcon/>
                 </IconButton>        
             </Paper>
-            {/* <input type="text" 
-            onChange={handleChange} 
-            value={searchParams.get("query")}
-            ></input> */}
-            {personajes && personajes.map((personaje)=>(
-                <h1> {personaje.title} </h1>
-            ))}
+            <Box sx={{display:"flex", flexWrap:"wrap", justifyContent:"center", mt:5}}>
+                {personajes && personajes.map((personaje)=>(
+                    <Card sx={{bgcolor:"transparent", m:1}} key={personaje.id}>
+                        <Box sx={{display:"flex"}}>
+                            <CardMedia sx={{width:300}}
+                            component="img"
+                            image = {personaje.poster_path ?
+                                `https://image.tmdb.org/t/p/original/${personaje.poster_path}`
+                                : imagenNotFount
+                            }
+                            alt={personaje.title}
+                            />
+                        </Box>
+                        <CardContent sx={{display:"flex", justifyContent:"center"}}>
+                            <Typography variant="subtitle1" fontWeight= "bold">
+                                {personaje.title ? personaje.title : "Titulo not found"}
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                ))}
+            </Box>
+            
         </Container>
 
 
