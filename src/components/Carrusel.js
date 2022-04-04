@@ -32,7 +32,7 @@ const Carrusel = () => {
                                 alt={principal.title}
                                 loading="lazy"
                             />
-                            <Box color = "ffffff" bgcolor="#111111" sx={{
+                            <Box bgcolor="#111111" sx={{
                                 position:"absolute", 
                                 left:350, 
                                 bottom:40, 
@@ -41,8 +41,8 @@ const Carrusel = () => {
                                 p:1,
                                 textAlign:"center"
                             }}> 
-                                <Typography variant="subtitle1" fontWeight="bold"> {principal.title} </Typography>
-                                <Typography variant="body2"> {principal.overview} </Typography>
+                                <Typography variant="subtitle1" fontWeight="bold" color="#FFFFFF"> {principal.title} </Typography>
+                                <Typography variant="body2" color="#FFFFFF"> {principal.overview} </Typography>
                                 <Link to={`/carddetallepelicula/${principal.id}`}>
                                     <Button>Ver mas</Button>
                                 </Link>

@@ -9,7 +9,7 @@ import {
 const useFetchDetalles = (categoria, id) =>{
     const [detalles, setDetalles] = useState([])
 
-    const url =`${urlBase}${definirURLDetalles(categoria,id)}?${apiKey}${queryParamLenguaje}=es`
+    const url =`${urlBase}${definirURLDetalles(categoria,id)}?${apiKey}${queryParamLenguaje}es`
 
     useEffect(()=>{
         fetch(url)

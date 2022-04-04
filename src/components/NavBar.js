@@ -15,8 +15,8 @@ const NavBar = ()=>{
         justifyContent:"space-between", 
         alignItems:"center", 
         bgcolor:"#7F020C",
-        pl:2, pr:3}}>
-            <Box sx={{display:"flex", justifyContent:"flex-start"}}>
+        pl:1, pr:3}}>
+            <Box sx={{display:"flex", justifyContent:"flex-start", p:1}}>
                 <Link to="/" style={{textDecoration:"none"}}> 
                     <CardMedia sx={{width:100}}
                         component="img"
@@ -24,8 +24,8 @@ const NavBar = ()=>{
                         alt="logo de la app"
                     />
                 </Link>
-
             </Box>
+
             <Box sx={{display:"flex", justifyContent:"space-between", width:250}}>
                 <Link to="/" style={{textDecoration:"none"}}> 
                     <HomeIcon sx={{color:"#111111", fontSize:35}}/> 

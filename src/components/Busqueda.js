@@ -1,5 +1,7 @@
+import {Link} from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import {useSearchParams} from "react-router-dom";
+
 import Paper from '@mui/material/Paper';
 import Container from '@mui/material/Container';
 import InputBase from '@mui/material/InputBase';
@@ -10,7 +12,9 @@ import Box from '@mui/material/Box';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
-import imagenNotFount from "../img/notFound.png"
+import imagenNotFount from "../img/notFound.png";
+
+
 const Busqueda = () => {
 
     const [searchParams, setSearchParams] = useSearchParams({
@@ -64,6 +68,8 @@ const Busqueda = () => {
             <Box sx={{display:"flex", flexWrap:"wrap", justifyContent:"center", mt:5}}>
                 {personajes && personajes.map((personaje)=>(
                     <Card sx={{bgcolor:"transparent", m:1}} key={personaje.id}>
+                    <Link to={`/carddetallepersonajes/${personaje.id}`} style={{textDecoration:"none"}}>
+
                         <Box sx={{display:"flex"}}>
                             <CardMedia sx={{width:300}}
                             component="img"
@@ -79,6 +85,7 @@ const Busqueda = () => {
                                 {personaje.title ? personaje.title : "Titulo not found"}
                             </Typography>
                         </CardContent>
+                        </Link>
                     </Card>
                 ))}
             </Box>

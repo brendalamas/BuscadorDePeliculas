@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
@@ -14,7 +15,6 @@ const PeliculaCategoriaCard = ({peliculas, titulos}) => {
             </Typography>
 
             <Box sx={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
-
                 {peliculas && peliculas.map(pelicula=>(
                     <Card sx={{
                         display:"flex", 
@@ -22,30 +22,33 @@ const PeliculaCategoriaCard = ({peliculas, titulos}) => {
                         alignItems:"center", 
                         m:1, 
                         bgcolor:"transparent"
-                    }}>
-                        <ImageList sx={{ width: 222, height: 400, m:0}} cols={1} rowHeight={350}>
-                            <ImageListItem>
-                                <img
-                                    src= {`https://image.tmdb.org/t/p/original/${pelicula.poster_path}`}
-                                    srcSet= {`https://image.tmdb.org/t/p/original/${pelicula.poster_path}`}
-                                    alt= {pelicula.title}
-                                    loading="lazy"
-                                />
-                            </ImageListItem>
-                        </ImageList>
-                        <Typography 
-                            variant="subtitle1" 
-                            color="#11111"
-                            fontWeight="bold" 
-                            textAlign="center">
-                            {pelicula.title}
-                        </Typography>
+                    }} key={pelicula.id}>
+                        <Link to={`/carddetallepersonajes/${pelicula.id}`} style={{textDecoration:"none"}}>
+                            <ImageList sx={{ width: 222, height: 400, m:0}} cols={1} rowHeight={350}>
+                                <ImageListItem>
+                                    <img
+                                        src= {`https://image.tmdb.org/t/p/original/${pelicula.poster_path}`}
+                                        srcSet= {`https://image.tmdb.org/t/p/original/${pelicula.poster_path}`}
+                                        alt= {pelicula.title}
+                                        loading="lazy"
+                                    />
+                                </ImageListItem>
+                            </ImageList>
+                            <Typography 
+                                variant="subtitle1" 
+                                color="#11111"
+                                fontWeight="bold" 
+                                textAlign="center">
+                                {pelicula.title}
+                            </Typography>
+                        </Link>
                     </Card>
                 ))}
 
             </Box>
             
         </Container>
+        
         
     )
 }
