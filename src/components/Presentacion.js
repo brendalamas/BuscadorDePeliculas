@@ -7,7 +7,7 @@ import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 
 const Presentacion = ({imagen, titulo, link}) => {
     return (
-        // <Link to={`/carddetallepelicula/${link}`} style={{textDecoration:"none"}}>
+        <Link to={`/carddetallepersonajes/${link}`} style={{textDecoration:"none"}}>
             <Card
             sx={{
                 display:"flex", 
@@ -35,7 +35,7 @@ const Presentacion = ({imagen, titulo, link}) => {
                 </Typography>
                 <RemoveRedEyeIcon sx={{m:1.5}}/>
             </Card>
-        // </Link>
+        </Link>
     )
 }
 
