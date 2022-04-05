@@ -16,7 +16,7 @@ const PeliculasSecciones = ({peliculasSlice, titulo, categoria}) => {
                     <ArrowForwardIcon sx={{color:"#94131d", ml:2, mt:0.5}}/>
                 </Link>
             </Box>            
-            <Box sx={{display:"flex", justifyContent:"flex-start", mt:3, mb:3}}>
+            <Box sx={{display:"flex", justifyContent:"center", mt:3, mb:3}}>
                 {peliculasSlice.map((pelicula)=>(
                     <Box key={pelicula.id}>
                         <Presentacion

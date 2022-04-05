@@ -13,7 +13,7 @@ const Presentacion = ({imagen, titulo, link}) => {
                 display:"flex", 
                 flexDirection:"column", 
                 alignItems:"center", 
-                m:0.5, 
+                m:2, 
                 bgcolor:"transparent"
             }}>
                 <ImageList sx={{ width: 222, height: 400, m:0}} cols={1} rowHeight={350}>
