@@ -5,7 +5,6 @@ export const queryParamPagina = '&page=';
 
 export const cortarArrayPeliculas = array => array.slice(0, 8);
 
-export const definirURL = (categoria, tipo, busqueda) =>
-  busqueda ? `${categoria}/${tipo}/${busqueda}` : `${tipo}/${categoria}`;
+export const definirURL = (categoria, tipo) => `${tipo}/${categoria}`;
 
 export const definirURLDetalles = (categoria, id) => `${categoria}/${id}`;

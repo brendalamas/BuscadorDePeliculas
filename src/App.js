@@ -15,6 +15,7 @@ import CardDetallePersonajes from './components/CardDetallePersonajes';
 
 const App = () => {
   
+  
   return (
     <BrowserRouter>
       <NavBar/>

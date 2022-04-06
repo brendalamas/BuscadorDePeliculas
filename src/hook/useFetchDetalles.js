@@ -16,6 +16,7 @@ const useFetchDetalles = (categoria, id) =>{
         .then(res=>res.json())
         .then(data=>{
             setDetalles(data)
+            console.log(data)
         })
     }, [url])
 

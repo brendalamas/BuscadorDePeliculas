@@ -10,7 +10,7 @@ const useFetchPeliculas = (categoria, tipo, search) =>{
     const [isLoading, setIsLoading] = useState(false);
     const [pelicula, setPelicula] = useState([])
 
-    const url =`${urlBase}${definirURL(categoria, tipo, search)}?${apiKey}${queryParamLenguaje}=es`
+    const url =`${urlBase}${definirURL(categoria, tipo)}?${apiKey}${queryParamLenguaje}=es`
 
     useEffect(()=>{
         setIsLoading(true);
