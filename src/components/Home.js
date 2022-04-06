@@ -26,7 +26,7 @@ const Home = ()=>{
           mb:10}}
         >
           <Typography variant="h1" fontWeight="bold"> 
-            Bienvenidx
+            Bienvenid🎥
           </Typography>
           <Typography variant="h2"> 
             ¡Espero que disfrutes del Buscador!
