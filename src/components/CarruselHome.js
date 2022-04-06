@@ -9,7 +9,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 
-const CarruselHome = ({titulo, pelicula, isLoading, categoria}) => {
+const CarruselHome = ({titulo, pelicula, isLoading, categoria, isTV}) => {
     return (
         <Container sx={{display:"flex", flexDirection:"column", mt:5, mb:7}}>
             {isLoading && <CircularProgress sx={{color:"black", fontSize:1000}}/>}
@@ -36,6 +36,7 @@ const CarruselHome = ({titulo, pelicula, isLoading, categoria}) => {
                                 : imagenNotFount}
                                 titulo={peli.title? peli.title: peli.name}
                                 link={peli.id}
+                                isTV={isTV}
                             />
                         </Box>
                     ))}

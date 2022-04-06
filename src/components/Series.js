@@ -18,16 +18,19 @@ const Series = ()=>{
                 cardPrincipales= {cortarArrayPeliculas(seriesPopulares)}
                 titulo= "Series Populares"
                 categoria="popular"
+                isTV={true}
                 />
                 <Secciones
                 cardPrincipales= {cortarArrayPeliculas(seriesConMejoresCriticas)}
                 titulo= "Series con mejores criticas"
                 categoria="top_rated"
+                isTV={true}
                 />
                 <Secciones
                 cardPrincipales= {cortarArrayPeliculas(seriesAlAire)}
                 titulo= "Series a estrenarse"
                 categoria="on_the_air"
+                isTV={true}
                 />
             </Box>
             

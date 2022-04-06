@@ -38,24 +38,28 @@ const Home = ()=>{
           pelicula={cortarArrayPeliculas(series)}
           isLoading={isLoadingSeries}
           categoria="popular"
+          isTV={true}
         />
         <CarruselHome
           titulo="Peliculas Populares" 
           pelicula={cortarArrayPeliculas(pelicula)}
           isLoading={isLoadingPeliculas}
           categoria="popular"
+          isTV={false}
         />
         <CarruselHome
           titulo="Series Mejor Puntuadas"
           pelicula={cortarArrayPeliculas(seriesMejorPuntuadas)}
           isLoading={isLoadingSeriesMejor}
           categoria="top_rated"
+          isTV={true}
         />
         <CarruselHome
           titulo="Peliculas Mejor Puntuadas" 
           pelicula={cortarArrayPeliculas(peliculasMejorPuntuadas)}
           isLoading={isLoadingPeliculasMejor}
           categoria="top_rated"
+          isTV={false}
         />
         <Footer/>
       </Container>

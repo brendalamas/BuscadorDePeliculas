@@ -5,9 +5,10 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
-const ItemPelicula = ({titulo, imagen, link}) => {
+const ItemPelicula = ({titulo, imagen, link, isTV}) => {
+    
     return (
-        <Link to={`/carddetallepersonajes/${link}`} style={{textDecoration:"none"}}>
+        <Link to={isTV? `/detalle-series/${link}`:`/detalle-peliculas/${link}`} style={{textDecoration:"none"}}>
             <Card sx={{display:"flex", flexDirection:"column", alignItems:"center", bgcolor:"transparent", m:1}}>
                 <Box sx={{display:"flex"}}>
                     <CardMedia sx={{width:250}}

@@ -5,9 +5,9 @@ import ImageListItem from '@mui/material/ImageListItem';
 import Typography from "@mui/material/Typography";
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 
-const Presentacion = ({imagen, titulo, link}) => {
+const Presentacion = ({imagen, titulo, link, isTV}) => {
     return (
-        <Link to={`/carddetallepersonajes/${link}`} style={{textDecoration:"none"}}>
+        <Link to={isTV? `/detalle-series/${link}`:`/detalle-peliculas/${link}`} style={{textDecoration:"none"}}>
             <Card
             sx={{
                 display:"flex", 

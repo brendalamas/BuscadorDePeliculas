@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Presentacion from "./Presentacion"
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-const Secciones = ({cardPrincipales, titulo, categoria}) => {
+const Secciones = ({cardPrincipales, titulo, categoria, isTV}) => {
     return (
         <Container>
             <Box bgcolor="#111111" sx={{mt:3, mb:3, p:1, display:"flex", alignItems:"center"}}>
@@ -23,6 +23,7 @@ const Secciones = ({cardPrincipales, titulo, categoria}) => {
                         imagen={`https://image.tmdb.org/t/p/original/${principal.poster_path}`}
                         titulo= {principal.title? principal.title : principal.name}
                         link={principal.id}
+                        isTV={isTV}
                         />
                     </Box>                    
                 ))}

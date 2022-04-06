@@ -31,27 +31,27 @@ const CardDetallePersonajesID = ({detalles}) => {
                     <Typography variant="body1"sx={{mt:1.2, mb:1.2}}> 
                         {detalles.overview} 
                     </Typography>
-                    {/* <Typography variant='subtitle1'>
+                    <Typography variant='subtitle1'>
                         Duracion: 
                         {detalles.runtime? detalles.runtime : detalles.episode_run_time } min
-                    </Typography> */}
-
-                    {/* {detalles.number_of_seasons && 
-                    `${<Typography variant='subtitle1'> 
-                        Temporadas: {detalles.number_of_seasons}
-                    </Typography>}`
-                    } 
+                    </Typography>
                     
-                    {detalles.number_of_episodes && 
-                    `${<Typography variant='subtitle1'> 
-                        Episodios: {detalles.number_of_episodes}
-                    </Typography>}`
-                    } 
+                    <Typography variant='subtitle1'> 
+                        {detalles.number_of_seasons && 
+                            `Temporadas: ${detalles.number_of_seasons}`
+                        } 
+                    </Typography>
+
+                    <Typography variant='subtitle1'> 
+                        {detalles.number_of_episodes && 
+                            `Episodios: ${detalles.number_of_episodes}`
+                        } 
+                    </Typography>
 
                     <Typography variant='subtitle1'> 
                         {detalles.budget &&  `Presupuesto: $${detalles.budget}`} 
-                    </Typography> */}
-                    {/* <Typography variant='subtitle1'>
+                    </Typography>
+                    <Typography variant='subtitle1'>
                         Produccion: 
                         {detalles.production_companies && detalles.production_companies.map((curr) => (
                             <ListItem key={curr.id} sx={{pt:0, pb:0}}>  
@@ -71,7 +71,7 @@ const CardDetallePersonajesID = ({detalles}) => {
                                 />
                             </ListItem>
                         ))}
-                    </Typography> */}
+                    </Typography>
                 </Box>
             </CardContent>
         </Box>
