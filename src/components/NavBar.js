@@ -6,16 +6,27 @@ import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import TvIcon from '@mui/icons-material/Tv';
-import LogoBL from "../img/logo.jpeg"
+import LogoBL from "../img/logo.jpeg";
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+
+
 const NavBar = ()=>{
+    const handleChangeIdioma = (e) => {
+        console.log(e.target.value)
+    }
+
     return(
         <AppBar sx={{
-        display:"flex", 
-        flexDirection:"row", 
-        justifyContent:"space-between", 
-        alignItems:"center", 
-        bgcolor:"#7F020C",
-        pl:1, pr:3}}>
+            display:"flex", 
+            flexDirection:"row", 
+            justifyContent:"space-between", 
+            alignItems:"center", 
+            bgcolor:"#7F020C",
+            pl:1, pr:3}}
+        >
             <Box sx={{display:"flex", justifyContent:"flex-start", p:1}}>
                 <Link to="/" style={{textDecoration:"none"}}> 
                     <CardMedia sx={{width:100}}
@@ -25,22 +36,37 @@ const NavBar = ()=>{
                     />
                 </Link>
             </Box>
-
-            <Box sx={{display:"flex", justifyContent:"space-between", width:250}}>
-                <Link to="/" style={{textDecoration:"none"}}> 
-                    <HomeIcon sx={{color:"#111111", fontSize:35}}/> 
-                </Link>
-                <Link to="/peliculas" style={{textDecoration:"none"}}> 
-                {/* aca tengo q poner las peliculas!! y adentro las peliculas mejor puntuadas y ultimos lanzamientos */}
-                    <VideocamIcon sx={{color:"#111111", fontSize:35}}/>
-                </Link>
-                <Link to="/series" style={{textDecoration:"none"}}> 
-                {/* aca tengo q poner las series!! y adentro las series (?) mejor puntuadas y ultimos lanzamientos (?)*/}
-                    <TvIcon sx={{color:"#111111", fontSize:35}}/>
-                </Link>
-                <Link to="/busqueda" style={{textDecoration:"none"}}> 
-                    <SearchIcon sx={{color:"#111111", fontSize:35}}/> 
-                </Link>
+            <Box sx={{display:"flex", justifyContent:"center", alignItems:"center",width:350}}>
+                <Box sx={{ display:"flex", justifyContent:"space-between", width:200}}>
+                    <Link to="/" style={{textDecoration:"none"}}> 
+                        <HomeIcon sx={{color:"#111111", fontSize:35}}/> 
+                    </Link>
+                    <Link to="/peliculas" style={{textDecoration:"none"}}> 
+                        <VideocamIcon sx={{color:"#111111", fontSize:35}}/>
+                    </Link>
+                    <Link to="/series" style={{textDecoration:"none"}}> 
+                        <TvIcon sx={{color:"#111111", fontSize:35}}/>
+                    </Link>
+                    <Link to="/busqueda" style={{textDecoration:"none"}}> 
+                        <SearchIcon sx={{color:"#111111", fontSize:35}}/> 
+                    </Link>
+                        
+                </Box>
+                <Box sx={{ width: 100, ml:1 }}>
+                    <FormControl fullWidth>
+                        <InputLabel id="demo-simple-select-label">Leng</InputLabel>
+                        <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        // value={age}
+                        label="Age"
+                        onChange={handleChangeIdioma}
+                        >
+                        <MenuItem value="es">ES</MenuItem>
+                        <MenuItem value="en">EN</MenuItem>
+                        </Select>
+                    </FormControl>
+                </Box>
             </Box>
 
         </AppBar>

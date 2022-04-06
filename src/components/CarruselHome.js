@@ -8,6 +8,7 @@ import imagenNotFount from "../img/notFound.png"
 import CircularProgress from '@mui/material/CircularProgress';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
+
 const CarruselHome = ({titulo, pelicula, isLoading, categoria}) => {
     return (
         <Container sx={{display:"flex", flexDirection:"column", mt:5, mb:7}}>
@@ -31,9 +32,9 @@ const CarruselHome = ({titulo, pelicula, isLoading, categoria}) => {
                     {pelicula.map(peli => (
                         <Box key={peli.id}>
                             <ItemPelicula
-                                imagen={peli.poster_path ? `https://image.tmdb.org/t/p/w300/${peli.poster_path}`
+                                imagen={peli.poster_path ? `https://image.tmdb.org/t/p/original/${peli.backdrop_path}`
                                 : imagenNotFount}
-                                titulo={peli.name? peli.name : peli.title}
+                                titulo={peli.title? peli.title: peli.name}
                                 link={peli.id}
                             />
                         </Box>
