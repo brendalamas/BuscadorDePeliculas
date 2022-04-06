@@ -10,7 +10,8 @@ import ErrorNoEncontrado from "./components/ErrorNoEncontrado"
 import NavBar from "./components/NavBar"
 import PeliculaCategoria from './components/PeliculaCategoria';
 import SerieCategoria from './components/SerieCategoria';
-import CardDetallePersonajes from './components/CardDetallePersonajes';
+import CardDetallePeliculas from './components/CardDetallePeliculas';
+import CardDetalleSeries from './components/CardDetalleSeries';
 
 
 const App = () => {
@@ -29,7 +30,9 @@ const App = () => {
 
         <Route path='/peliculacategoria/:idDetalle' element={<PeliculaCategoria/>}/>
         <Route path='/seriecategoria/:idSerie' element={<SerieCategoria/>}/>
-        <Route path='/carddetallepersonajes/:idPersonajes' element={<CardDetallePersonajes/>}/>
+        <Route path='/detalle-peliculas/:idPersonajesPeliculas' element={<CardDetallePeliculas/>}/>
+        <Route path='/detalle-series/:idPersonajesSeries' element={<CardDetalleSeries/>}/>
+
       </Routes>
     </BrowserRouter>
   );

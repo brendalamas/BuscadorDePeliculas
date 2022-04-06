@@ -18,16 +18,19 @@ const Peliculas = ()=>{
                 cardPrincipales= {cortarArrayPeliculas(peliculasPopulares)}
                 titulo= "Peliculas Populares"
                 categoria="popular"
+                isTV={false}
                 />
                 <Secciones
                 cardPrincipales= {cortarArrayPeliculas(peliculasMejorCriticas)}
                 titulo= "Peliculas con mejores criticas"
                 categoria="top_rated"
+                isTV={false}
                 />
                 <Secciones
                 cardPrincipales= {cortarArrayPeliculas(peliculasAEstrenarse)}
                 titulo= "Peliculas a estrenarse"
                 categoria="upcoming"
+                isTV={false}
                 />
             </Box>
         </Container>
