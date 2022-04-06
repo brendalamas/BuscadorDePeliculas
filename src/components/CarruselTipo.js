@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
-const CarruselTipo = ({tipo}) => {
+const CarruselTipo = ({tipo, isTV}) => {
     return (
         <Slider 
             dots={true}
@@ -37,7 +37,7 @@ const CarruselTipo = ({tipo}) => {
                     }}> 
                         <Typography variant="subtitle1" fontWeight="bold" color="#FFFFFF"> {pelicula.title} </Typography>
                         <Typography variant="body2" color="#FFFFFF"> {pelicula.overview} </Typography>
-                        <Link to={`/carddetallepersonajes/${pelicula.id}`}>
+                        <Link to={isTV? `/detalle-series/${pelicula.id}`:`/detalle-peliculas/${pelicula.id}`} style={{textDecoration:"none"}}>
                             <Button>Ver mas</Button>
                         </Link>
                     </Box>

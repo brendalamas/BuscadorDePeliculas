@@ -1,19 +1,22 @@
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import Footer from "./Footer"
 import CarruselHome from "./CarruselHome";
-// import CircularProgress from '@mui/material/CircularProgress';
 import useFetchPeliculas from "../hook/useFetchPeliculas";
 import { cortarArrayPeliculas } from "../utils/variables";
-import { Typography } from '@mui/material';
+import Context from "../context/Context";
+import { useContext } from 'react';
 
 
 const Home = ()=>{
-    const { pelicula, isLoading: isLoadingPeliculas } = useFetchPeliculas('popular', 'movie');
-    const { pelicula: peliculasMejorPuntuadas, isLoading: isLoadingPeliculasMejor} = useFetchPeliculas('top_rated', 'movie');
+  const context = useContext(Context);
 
-  const { pelicula: series, isLoading: isLoadingSeries} = useFetchPeliculas('popular','tv');
-  const { pelicula: seriesMejorPuntuadas, isLoading: isLoadingSeriesMejor } = useFetchPeliculas('top_rated','tv');
+  const { pelicula, isLoading: isLoadingPeliculas } = useFetchPeliculas('popular', 'movie', `${context.language}`);
+  const { pelicula: peliculasMejorPuntuadas, isLoading: isLoadingPeliculasMejor} = useFetchPeliculas('top_rated', 'movie', `${context.language}`);
+
+  const { pelicula: series, isLoading: isLoadingSeries} = useFetchPeliculas('popular','tv', `${context.language}`);
+  const { pelicula: seriesMejorPuntuadas, isLoading: isLoadingSeriesMejor} = useFetchPeliculas('top_rated','tv', `${context.language}`);
 
     return(
       <Container sx={{mt:18, display:"flex", flexDirection:"column", position:"relative"}}>
@@ -26,7 +29,7 @@ const Home = ()=>{
           mb:10}}
         >
           <Typography variant="h1" fontWeight="bold"> 
-            Bienvenid🎥
+            Bienvenidx🎥
           </Typography>
           <Typography variant="h2"> 
             ¡Espero que disfrutes del Buscador!

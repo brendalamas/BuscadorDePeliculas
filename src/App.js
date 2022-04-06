@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
+import {useState} from "react"
 import Home from "./components/Home" 
 import Peliculas from "./components/Peliculas"
 import Series from "./components/Series"
@@ -12,12 +13,21 @@ import PeliculaCategoria from './components/PeliculaCategoria';
 import SerieCategoria from './components/SerieCategoria';
 import CardDetallePeliculas from './components/CardDetallePeliculas';
 import CardDetalleSeries from './components/CardDetalleSeries';
+import Context from "./context/Context"
 
 
 const App = () => {
-  
-  
+  const [language, setLanguage] = useState("es")
+
+  const context = {
+    language: language,
+    setLanguage: setLanguage
+  }
+
+  console.log(context)
+
   return (
+    <Context.Provider value={context}>
     <BrowserRouter>
       <NavBar/>
       <Routes>
@@ -35,6 +45,7 @@ const App = () => {
 
       </Routes>
     </BrowserRouter>
+    </Context.Provider>
   );
 }
 
