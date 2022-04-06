@@ -6,6 +6,7 @@ import CarruselSerie from './CarruselSerie';
 import Box from '@mui/material/Box';
 import Context from "../context/Context";
 import { useContext } from 'react';
+import {seriestitulo} from "../utils/titulos";
 
 
 const Series = ()=>{
@@ -21,19 +22,19 @@ const Series = ()=>{
             <Box sx={{mt:7}}>
                 <Secciones
                 cardPrincipales= {cortarArrayPeliculas(seriesPopulares)}
-                titulo= "Series Populares"
+                titulo= {seriestitulo[context.language].populares}
                 categoria="popular"
                 isTV={true}
                 />
                 <Secciones
                 cardPrincipales= {cortarArrayPeliculas(seriesConMejoresCriticas)}
-                titulo= "Series con mejores criticas"
+                titulo= {seriestitulo[context.language].mejorPuntuadas}
                 categoria="top_rated"
                 isTV={true}
                 />
                 <Secciones
                 cardPrincipales= {cortarArrayPeliculas(seriesAlAire)}
-                titulo= "Series a estrenarse"
+                titulo= {seriestitulo[context.language].estreno}
                 categoria="on_the_air"
                 isTV={true}
                 />

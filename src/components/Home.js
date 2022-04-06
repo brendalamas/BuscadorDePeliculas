@@ -8,6 +8,8 @@ import { cortarArrayPeliculas } from "../utils/variables";
 import Context from "../context/Context";
 import { useContext } from 'react';
 
+import {titulosExtras, seriestitulo, peliculastitulo} from "../utils/titulos";
+
 
 const Home = ()=>{
   const context = useContext(Context);
@@ -29,36 +31,36 @@ const Home = ()=>{
           mb:10}}
         >
           <Typography variant="h1" fontWeight="bold"> 
-            Bienvenidx🎥
+            {titulosExtras[context.language].bienvenidos}
           </Typography>
           <Typography variant="h2"> 
-            ¡Espero que disfrutes del Buscador!
+            {titulosExtras[context.language].bienvenidosParrafo}
           </Typography>
         </Box>
 
         <CarruselHome
-          titulo="Series Populares"
+          titulo={seriestitulo[context.language].populares}
           pelicula={cortarArrayPeliculas(series)}
           isLoading={isLoadingSeries}
           categoria="popular"
           isTV={true}
         />
         <CarruselHome
-          titulo="Peliculas Populares" 
+          titulo={peliculastitulo[context.language].populares}
           pelicula={cortarArrayPeliculas(pelicula)}
           isLoading={isLoadingPeliculas}
           categoria="popular"
           isTV={false}
         />
         <CarruselHome
-          titulo="Series Mejor Puntuadas"
+          titulo={seriestitulo[context.language].mejorPuntuadas}
           pelicula={cortarArrayPeliculas(seriesMejorPuntuadas)}
           isLoading={isLoadingSeriesMejor}
           categoria="top_rated"
           isTV={true}
         />
         <CarruselHome
-          titulo="Peliculas Mejor Puntuadas" 
+          titulo={peliculastitulo[context.language].mejorPuntuadas}
           pelicula={cortarArrayPeliculas(peliculasMejorPuntuadas)}
           isLoading={isLoadingPeliculasMejor}
           categoria="top_rated"

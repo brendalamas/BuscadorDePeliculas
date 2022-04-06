@@ -6,6 +6,7 @@ import { cortarArrayPeliculas } from "../utils/variables";
 import Box from '@mui/material/Box';
 import Context from "../context/Context";
 import { useContext } from 'react';
+import {peliculastitulo} from "../utils/titulos";
 
 
 const Peliculas = ()=>{
@@ -21,19 +22,19 @@ const Peliculas = ()=>{
             <Box sx={{mt:7}}>
                 <Secciones
                 cardPrincipales= {cortarArrayPeliculas(peliculasPopulares)}
-                titulo= "Peliculas Populares"
+                titulo= {peliculastitulo[context.language].populares}
                 categoria="popular"
                 isTV={false}
                 />
                 <Secciones
                 cardPrincipales= {cortarArrayPeliculas(peliculasMejorCriticas)}
-                titulo= "Peliculas con mejores criticas"
+                titulo= {peliculastitulo[context.language].mejorPuntuadas}
                 categoria="top_rated"
                 isTV={false}
                 />
                 <Secciones
                 cardPrincipales= {cortarArrayPeliculas(peliculasAEstrenarse)}
-                titulo= "Peliculas a estrenarse"
+                titulo= {peliculastitulo[context.language].estreno}
                 categoria="upcoming"
                 isTV={false}
                 />

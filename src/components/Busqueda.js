@@ -7,10 +7,11 @@ import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import Box from '@mui/material/Box';
 import BusquedaCard from './BusquedaCard';
-import Typography from '@mui/material/Typography';
-
+import Context from "../context/Context";
+import { useContext } from 'react';
 
 const Busqueda = () => {
+    const context = useContext(Context);
 
     const [searchParams, setSearchParams] = useSearchParams({
         query:""
@@ -22,12 +23,12 @@ const Busqueda = () => {
     
 
     useEffect(()=>{
-        fetch (`https://api.themoviedb.org/3/search/multi?api_key=6e372c30d27676867cdbcfd7e00f4cf2&language=en-ES&query=${busqueda}`)
+        fetch (`https://api.themoviedb.org/3/search/multi?api_key=6e372c30d27676867cdbcfd7e00f4cf2&language=${context.language}&query=${busqueda}`)
         .then(res => res.json())
         .then(data => {
             setPersonajes(data.results)
         })
-    },[busqueda])
+    },[busqueda, context.language])
 
     const handleSubmit = (e) => {
         e.preventDefault()
