@@ -6,17 +6,18 @@ import {
     definirURLDetalles,
   } from "../utils/variables";
 
-const useFetchDetalles = (categoria, id) =>{
+const useFetchDetalles = (categoria, id, language) =>{
     const [detalles, setDetalles] = useState([])
+    const [tipoLanguage, setTipoLanguage] = useState("es")
 
-    const url =`${urlBase}${definirURLDetalles(categoria,id)}?${apiKey}${queryParamLenguaje}es`
+    const url =`${urlBase}${definirURLDetalles(categoria,id)}?${apiKey}${queryParamLenguaje(language)}`
 
     useEffect(()=>{
         fetch(url)
         .then(res=>res.json())
         .then(data=>{
             setDetalles(data)
-            console.log(data)
+            setTipoLanguage(data.results)
         })
     }, [url])
 

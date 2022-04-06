@@ -11,11 +11,14 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { useContext, useEffect, useState } from 'react';
+import Context from "../context/Context";
 
 
 const NavBar = ()=>{
+    const context = useContext(Context);
     const handleChangeIdioma = (e) => {
-        console.log(e.target.value)
+        context.setLanguage(e.target.value)
     }
 
     return(
@@ -36,6 +39,7 @@ const NavBar = ()=>{
                     />
                 </Link>
             </Box>
+
             <Box sx={{display:"flex", justifyContent:"center", alignItems:"center",width:350}}>
                 <Box sx={{ display:"flex", justifyContent:"space-between", width:200}}>
                     <Link to="/" style={{textDecoration:"none"}}> 
@@ -50,20 +54,20 @@ const NavBar = ()=>{
                     <Link to="/busqueda" style={{textDecoration:"none"}}> 
                         <SearchIcon sx={{color:"#111111", fontSize:35}}/> 
                     </Link>
-                        
+
                 </Box>
-                <Box sx={{ width: 100, ml:1 }}>
+                <Box sx={{ width: 120, ml:2 }}>
                     <FormControl fullWidth>
                         <InputLabel id="demo-simple-select-label">Leng</InputLabel>
                         <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
-                        // value={age}
                         label="Age"
                         onChange={handleChangeIdioma}
                         >
-                        <MenuItem value="es">ES</MenuItem>
-                        <MenuItem value="en">EN</MenuItem>
+                        <MenuItem value="es">Español</MenuItem>
+                        <MenuItem value="en">English</MenuItem>
+                        <MenuItem value="pt">Português</MenuItem>
                         </Select>
                     </FormControl>
                 </Box>

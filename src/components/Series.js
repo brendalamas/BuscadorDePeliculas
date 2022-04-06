@@ -4,11 +4,16 @@ import Container from '@mui/material/Container';
 import Secciones from "./Secciones";
 import CarruselSerie from './CarruselSerie';
 import Box from '@mui/material/Box';
+import Context from "../context/Context";
+import { useContext } from 'react';
+
 
 const Series = ()=>{
-    const { pelicula: seriesPopulares } = useFetchPeliculas('popular','tv');
-    const { pelicula: seriesConMejoresCriticas} = useFetchPeliculas('top_rated','tv');
-    const { pelicula: seriesAlAire } = useFetchPeliculas('on_the_air','tv');
+    const context = useContext(Context);
+
+    const { pelicula: seriesPopulares} = useFetchPeliculas('popular','tv', `${context.language}`);
+    const { pelicula: seriesConMejoresCriticas} = useFetchPeliculas('top_rated','tv', `${context.language}`);
+    const { pelicula: seriesAlAire} = useFetchPeliculas('on_the_air','tv', `${context.language}`);
 
     return(
         <Container sx={{mt:20}}>

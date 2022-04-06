@@ -4,11 +4,16 @@ import useFetchPeliculas from "../hook/useFetchPeliculas";
 import CarruselPeliculas from './CarruselPeliculas';
 import { cortarArrayPeliculas } from "../utils/variables";
 import Box from '@mui/material/Box';
+import Context from "../context/Context";
+import { useContext } from 'react';
+
 
 const Peliculas = ()=>{
-    const { pelicula: peliculasPopulares } = useFetchPeliculas('popular', 'movie');
-    const { pelicula: peliculasMejorCriticas } = useFetchPeliculas('top_rated', 'movie');
-    const { pelicula: peliculasAEstrenarse } = useFetchPeliculas('upcoming', 'movie');
+    const context = useContext(Context);
+  
+    const { pelicula: peliculasPopulares} = useFetchPeliculas('popular', 'movie', `${context.language}`);
+    const { pelicula: peliculasMejorCriticas} = useFetchPeliculas('top_rated', 'movie', `${context.language}`);
+    const { pelicula: peliculasAEstrenarse} = useFetchPeliculas('upcoming', 'movie', `${context.language}`);
 
     return(
         <Container sx={{mt:20}}>

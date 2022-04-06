@@ -6,11 +6,12 @@ import {
     definirURL,
   } from "../utils/variables";
 
-const useFetchPeliculas = (categoria, tipo, search) =>{
+const useFetchPeliculas = (categoria, tipo, language) =>{
     const [isLoading, setIsLoading] = useState(false);
-    const [pelicula, setPelicula] = useState([])
+    const [pelicula, setPelicula] = useState([]);
+    const [tipoLanguage, setTipoLanguage] = useState("es")
 
-    const url =`${urlBase}${definirURL(categoria, tipo)}?${apiKey}${queryParamLenguaje}=es`
+    const url =`${urlBase}${definirURL(categoria, tipo)}?${apiKey}${queryParamLenguaje(language)}`
 
     useEffect(()=>{
         setIsLoading(true);
@@ -19,8 +20,11 @@ const useFetchPeliculas = (categoria, tipo, search) =>{
         .then(data=>{
             setPelicula(data.results)
             setIsLoading(false);
+            setTipoLanguage(data.results)
         })
     }, [url])
+    
+    console.log(tipoLanguage)
 
     return {
         pelicula:pelicula,
