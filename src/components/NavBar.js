@@ -11,7 +11,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { useContext, useEffect, useState } from 'react';
+import { useContext} from 'react';
 import Context from "../context/Context";
 
 
@@ -56,15 +56,16 @@ const NavBar = ()=>{
                     </Link>
 
                 </Box>
-                <Box sx={{ width: 120, ml:2 }}>
+                <Box sx={{ width: 120, ml:2}}>
                     <FormControl fullWidth>
-                        <InputLabel id="demo-simple-select-label">Leng</InputLabel>
+                        <InputLabel id="demo-simple-select-label"> Leng</InputLabel>
                         <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
                         label="Age"
                         onChange={handleChangeIdioma}
-                        >
+                       >
+                        
                         <MenuItem value="es">Español</MenuItem>
                         <MenuItem value="en">English</MenuItem>
                         <MenuItem value="pt">Português</MenuItem>

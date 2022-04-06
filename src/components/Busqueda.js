@@ -28,7 +28,7 @@ const Busqueda = () => {
         .then(data => {
             setPersonajes(data.results)
         })
-    },[busqueda])
+    },[busqueda, context.language])
 
     const handleSubmit = (e) => {
         e.preventDefault()
