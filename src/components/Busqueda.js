@@ -67,9 +67,8 @@ const Busqueda = () => {
             </Paper>
             <Box sx={{display:"flex", flexWrap:"wrap", justifyContent:"center", mt:5}}>
                 {personajes && personajes.map((personaje)=>(
-                    <Card sx={{bgcolor:"transparent", m:1}} key={personaje.id}>
+                    <Card sx={{bgcolor:"transparent", m:1, width:300}} key={personaje.id}>
                     <Link to={`/carddetallepersonajes/${personaje.id}`} style={{textDecoration:"none"}}>
-
                         <Box sx={{display:"flex"}}>
                             <CardMedia sx={{width:300}}
                             component="img"
@@ -80,12 +79,15 @@ const Busqueda = () => {
                             alt={personaje.title}
                             />
                         </Box>
-                        <CardContent sx={{display:"flex", justifyContent:"center"}}>
-                            <Typography variant="subtitle1" fontWeight= "bold">
-                                {personaje.title ? personaje.title : "Titulo not found"}
-                            </Typography>
-                        </CardContent>
-                        </Link>
+                        <Typography  sx={{p:3}}
+                        variant="subtitle1" 
+                        fontWeight= "bold" 
+                        textAlign="center" 
+                        color="#000000"
+                        >
+                            {personaje.title ? personaje.title : personaje.name}
+                        </Typography>
+                    </Link>
                     </Card>
                 ))}
             </Box>

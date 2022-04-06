@@ -30,7 +30,7 @@ const CardDetallePersonajes = () =>{
                     <CardMedia
                     component="img"
                     image = {`https://image.tmdb.org/t/p/original/${detalles.poster_path? 
-                    detalles.backdrop_path : detallesSeries.backdrop_path}`}
+                    detalles.poster_path : detallesSeries.poster_path}`}
                     alt={detalles.title ? detalles.title: detallesSeries.name} 
                     />
                 </Box>
