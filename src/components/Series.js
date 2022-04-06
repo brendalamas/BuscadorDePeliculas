@@ -1,7 +1,9 @@
 import useFetchPeliculas from "../hook/useFetchPeliculas";
 import { cortarArrayPeliculas } from "../utils/variables";
 import Container from '@mui/material/Container';
-import SeriesSecciones from "./SeriesSecciones";
+import Secciones from "./Secciones";
+import CarruselSerie from './CarruselSerie';
+import Box from '@mui/material/Box';
 
 const Series = ()=>{
     const { pelicula: seriesPopulares } = useFetchPeliculas('popular','tv');
@@ -10,21 +12,25 @@ const Series = ()=>{
 
     return(
         <Container sx={{mt:20}}>
-            <SeriesSecciones
-            seriesSlice= {cortarArrayPeliculas(seriesPopulares)}
-            titulo= "Series Populares"
-            categoria="popular"
-            />
-            <SeriesSecciones
-            seriesSlice= {cortarArrayPeliculas(seriesConMejoresCriticas)}
-            titulo= "Series con mejores criticas"
-            categoria="top_rated"
-            />
-            <SeriesSecciones
-            seriesSlice= {cortarArrayPeliculas(seriesAlAire)}
-            titulo= "Series a estrenarse"
-            categoria="on_the_air"
-            />
+            <CarruselSerie/>
+            <Box sx={{mt:7}}>
+                <Secciones
+                cardPrincipales= {cortarArrayPeliculas(seriesPopulares)}
+                titulo= "Series Populares"
+                categoria="popular"
+                />
+                <Secciones
+                cardPrincipales= {cortarArrayPeliculas(seriesConMejoresCriticas)}
+                titulo= "Series con mejores criticas"
+                categoria="top_rated"
+                />
+                <Secciones
+                cardPrincipales= {cortarArrayPeliculas(seriesAlAire)}
+                titulo= "Series a estrenarse"
+                categoria="on_the_air"
+                />
+            </Box>
+            
         </Container>
     )
 }

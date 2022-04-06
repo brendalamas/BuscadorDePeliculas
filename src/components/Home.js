@@ -1,46 +1,62 @@
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-import Listas from "./Listas";
-import Carrusel from './Carrusel';
 import Footer from "./Footer"
-
+import CarruselHome from "./CarruselHome";
+// import CircularProgress from '@mui/material/CircularProgress';
 import useFetchPeliculas from "../hook/useFetchPeliculas";
 import { cortarArrayPeliculas } from "../utils/variables";
+import { Typography } from '@mui/material';
+
 
 const Home = ()=>{
-    const { pelicula } = useFetchPeliculas('popular', 'movie');
-    const { pelicula: peliculasMejorPuntuadas } = useFetchPeliculas('top_rated', 'movie');
+    const { pelicula, isLoading: isLoadingPeliculas } = useFetchPeliculas('popular', 'movie');
+    const { pelicula: peliculasMejorPuntuadas, isLoading: isLoadingPeliculasMejor} = useFetchPeliculas('top_rated', 'movie');
 
-  const { pelicula: series } = useFetchPeliculas('popular','tv');
-  const { pelicula: seriesMejorPuntuadas } = useFetchPeliculas('top_rated','tv');
+  const { pelicula: series, isLoading: isLoadingSeries} = useFetchPeliculas('popular','tv');
+  const { pelicula: seriesMejorPuntuadas, isLoading: isLoadingSeriesMejor } = useFetchPeliculas('top_rated','tv');
 
     return(
-      <Container sx={{mt:15, display:"flex", flexDirection:"column"}}>
-        <Carrusel/>
-        <Box sx={{display:"flex", flexDirection:"column", mt:8}}>
-          <Box sx={{display:"flex", flexDirection:"column"}}>
-            <Listas 
-              titulo="Peliculas Populares" 
-              pelicula={cortarArrayPeliculas(pelicula)}
-              isTv={false}
-            />
-            <Listas 
-              titulo="Peliculas Mejor Puntuadas" 
-              pelicula={cortarArrayPeliculas(peliculasMejorPuntuadas)}
-              isTv={false}
-            />
-            <Listas 
-              titulo="Series Populares"
-              pelicula={cortarArrayPeliculas(series)}
-              isTv={true}
-            />
-            <Listas 
-              titulo="Series Mejor Puntuadas"
-              pelicula={cortarArrayPeliculas(seriesMejorPuntuadas)}
-              isTv={true}
-            />
-          </Box>
+      <Container sx={{mt:18, display:"flex", flexDirection:"column", position:"relative"}}>
+        <Box sx={{
+          display:"flex", 
+          flexDirection:"column", 
+          alignItems:"center", 
+          bgcolor:"#000000", 
+          color:"#7F020C",
+          mb:10}}
+        >
+          <Typography variant="h1" fontWeight="bold"> 
+            Bienvenidx
+          </Typography>
+          <Typography variant="h2"> 
+            ¡Espero que disfrutes del Buscador!
+          </Typography>
         </Box>
+
+        <CarruselHome
+          titulo="Series Populares"
+          pelicula={cortarArrayPeliculas(series)}
+          isLoading={isLoadingSeries}
+          categoria="popular"
+        />
+        <CarruselHome
+          titulo="Peliculas Populares" 
+          pelicula={cortarArrayPeliculas(pelicula)}
+          isLoading={isLoadingPeliculas}
+          categoria="popular"
+        />
+        <CarruselHome
+          titulo="Series Mejor Puntuadas"
+          pelicula={cortarArrayPeliculas(seriesMejorPuntuadas)}
+          isLoading={isLoadingSeriesMejor}
+          categoria="top_rated"
+        />
+        <CarruselHome
+          titulo="Peliculas Mejor Puntuadas" 
+          pelicula={cortarArrayPeliculas(peliculasMejorPuntuadas)}
+          isLoading={isLoadingPeliculasMejor}
+          categoria="top_rated"
+        />
         <Footer/>
       </Container>
     )

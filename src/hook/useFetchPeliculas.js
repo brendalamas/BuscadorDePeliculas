@@ -7,20 +7,24 @@ import {
   } from "../utils/variables";
 
 const useFetchPeliculas = (categoria, tipo, search) =>{
+    const [isLoading, setIsLoading] = useState(false);
     const [pelicula, setPelicula] = useState([])
 
     const url =`${urlBase}${definirURL(categoria, tipo, search)}?${apiKey}${queryParamLenguaje}=es`
 
     useEffect(()=>{
+        setIsLoading(true);
         fetch(url)
         .then(res=>res.json())
         .then(data=>{
             setPelicula(data.results)
+            setIsLoading(false);
         })
     }, [url])
 
     return {
-        pelicula:pelicula
+        pelicula:pelicula,
+        isLoading: isLoading,
     }
 }
 
