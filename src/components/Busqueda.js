@@ -14,6 +14,9 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import notFound from "../img/notFound.png";
 import {titulosExtras} from "../utils/titulos";
+import ErrorNoEncontrado from "./ErrorNoEncontrado";
+
+
 
 const Busqueda = () => {
     const context = useContext(Context);
@@ -37,7 +40,10 @@ const Busqueda = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-    }
+        personajes === "" && <ErrorNoEncontrado/>
+        console.log(personajes)
+    }        
+
     
     const handleChangeInput = (e) => {
         setSearchParams({
@@ -47,6 +53,7 @@ const Busqueda = () => {
     
     const handleClick = () => {
         setBusqueda(searchParams.get("query"))
+
     }
 
     const handleChange = (event, value) => {

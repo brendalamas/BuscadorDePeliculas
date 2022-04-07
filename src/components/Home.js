@@ -21,7 +21,7 @@ const Home = ()=>{
   const { pelicula: seriesMejorPuntuadas, isLoading: isLoadingSeriesMejor} = useFetchPeliculas('top_rated','tv', `${context.language}`);
 
     return(
-      <Container sx={{mt:18, display:"flex", flexDirection:"column", position:"relative"}}>
+      <Box sx={{mt:18, display:"flex", flexDirection:"column", position:"relative"}}>
         <Box sx={{
           display:"flex", 
           flexDirection:"column", 
@@ -67,7 +67,7 @@ const Home = ()=>{
           isTV={false}
         />
         <Footer/>
-      </Container>
+      </Box>
     )
 }
 
