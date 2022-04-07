@@ -4,14 +4,16 @@ import {
     apiKey,
     queryParamLenguaje,
     definirURL,
+    queryParamPagina
   } from "../utils/variables";
 
-const useFetchPeliculas = (categoria, tipo, language) =>{
+const useFetchPeliculas = (categoria, tipo, language, page) =>{
     const [isLoading, setIsLoading] = useState(false);
     const [pelicula, setPelicula] = useState([]);
     const [tipoLanguage, setTipoLanguage] = useState("es")
+    const [totalPage, setTotalPage] = useState([]);
 
-    const url =`${urlBase}${definirURL(categoria, tipo)}?${apiKey}${queryParamLenguaje(language)}`
+    const url =`${urlBase}${definirURL(categoria, tipo)}?${apiKey}${queryParamLenguaje(language)}${queryParamPagina}${page}`
 
     useEffect(()=>{
         setIsLoading(true);
@@ -20,15 +22,15 @@ const useFetchPeliculas = (categoria, tipo, language) =>{
         .then(data=>{
             setPelicula(data.results)
             setIsLoading(false);
-            setTipoLanguage(data.results)
+            setTipoLanguage(data.results);
+            setTotalPage(data.total_pages);
         })
-    }, [url])
+    }, [url, page])
     
-    console.log(tipoLanguage)
-
     return {
         pelicula:pelicula,
         isLoading: isLoading,
+        totalPage:totalPage
     }
 }
 

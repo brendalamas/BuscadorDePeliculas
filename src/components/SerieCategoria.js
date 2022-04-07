@@ -1,15 +1,20 @@
+import { useParams  } from "react-router-dom";
+import { useContext, useState } from 'react';
+import Context from "../context/Context";
 import useFetchPeliculas from "../hook/useFetchPeliculas";
 import Container from '@mui/material/Container';
-import PeliculaCategoriaCard from "./PeliculaCategoriaCard"
-import { useParams  } from "react-router-dom";
+import CardCategoria from "./CardCategoria"
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+
 
 const SerieCategoria = () => {
+    const context = useContext(Context);
     const params = useParams() 
-    console.log(params.idSerie)
 
-    const {pelicula : serie} = useFetchPeliculas(`${params.idSerie}`, 'tv');
-
-    console.log(serie)
+    const [page, setPage] = useState(1);
+    const {pelicula : serie, totalPage} = useFetchPeliculas(`${params.idSerie}`, 'tv', `${context.language}`, page);
     
     const definirTituloSerie = () =>{
         if (params.idSerie === "popular") {
@@ -20,12 +25,23 @@ const SerieCategoria = () => {
             return "Series a estrenarse"
         }
     }
+
+    const handleChange = (event, value) => {
+      setPage(value);
+    };
+
     return (
         <Container sx={{display:"flex", flexWrap:"wrap", mt:20, justifyContent:"center"}}>
-            <PeliculaCategoriaCard 
+            <CardCategoria 
                 peliculas={serie}
                 titulos= {definirTituloSerie()}
+                isTV={true}
             />
+            <Box sx={{m:4}}>
+                <Stack spacing={2}>
+                    <Pagination count={totalPage > 500 ? 500 : totalPage} page={page} onChange={handleChange} />
+                </Stack>
+            </Box>
         </Container>
     )
 }
