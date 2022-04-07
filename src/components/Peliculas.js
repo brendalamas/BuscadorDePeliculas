@@ -21,22 +21,22 @@ const Peliculas = ()=>{
             <CarruselPeliculas/>
             <Box sx={{mt:7}}>
                 <Secciones
-                cardPrincipales= {cortarArrayPeliculas(peliculasPopulares)}
-                titulo= {peliculastitulo[context.language].populares}
-                categoria="popular"
-                isTV={false}
+                    cardPrincipales= {cortarArrayPeliculas(peliculasPopulares)}
+                    titulo= {peliculastitulo[context.language].populares}
+                    categoria="popular"
+                    isTV={false}
                 />
                 <Secciones
-                cardPrincipales= {cortarArrayPeliculas(peliculasMejorCriticas)}
-                titulo= {peliculastitulo[context.language].mejorPuntuadas}
-                categoria="top_rated"
-                isTV={false}
+                    cardPrincipales= {cortarArrayPeliculas(peliculasMejorCriticas)}
+                    titulo= {peliculastitulo[context.language].mejorPuntuadas}
+                    categoria="top_rated"
+                    isTV={false}
                 />
                 <Secciones
-                cardPrincipales= {cortarArrayPeliculas(peliculasAEstrenarse)}
-                titulo= {peliculastitulo[context.language].estreno}
-                categoria="upcoming"
-                isTV={false}
+                    cardPrincipales= {cortarArrayPeliculas(peliculasAEstrenarse)}
+                    titulo= {peliculastitulo[context.language].estreno}
+                    categoria="upcoming"
+                    isTV={false}
                 />
             </Box>
         </Container>

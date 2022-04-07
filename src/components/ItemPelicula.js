@@ -9,9 +9,16 @@ const ItemPelicula = ({titulo, imagen, link, isTV}) => {
     
     return (
         <Link to={isTV? `/detalle-series/${link}`:`/detalle-peliculas/${link}`} style={{textDecoration:"none"}}>
-            <Card sx={{display:"flex", flexDirection:"column", alignItems:"center", bgcolor:"transparent", m:1}}>
+            <Card sx={{
+                display:"flex", 
+                flexDirection:"column", 
+                alignItems:"center", 
+                bgcolor:"transparent", 
+                m:1, 
+                height:250}}
+            >
                 <Box sx={{display:"flex"}}>
-                    <CardMedia sx={{width:250}}
+                    <CardMedia sx={{width:250, height:170}}
                     component="img"
                     image = {imagen}
                     alt={titulo}

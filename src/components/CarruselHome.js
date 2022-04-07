@@ -4,9 +4,8 @@ import ItemPelicula from "./ItemPelicula";
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import imagenNotFount from "../img/notFound.png"
+import notFound from "../img/notFound.png"
 import CircularProgress from '@mui/material/CircularProgress';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 
 const CarruselHome = ({titulo, pelicula, isLoading, categoria, isTV}) => {
@@ -32,8 +31,10 @@ const CarruselHome = ({titulo, pelicula, isLoading, categoria, isTV}) => {
                     {pelicula.map(peli => (
                         <Box key={peli.id}>
                             <ItemPelicula
-                                imagen={peli.poster_path ? `https://image.tmdb.org/t/p/original/${peli.backdrop_path}`
-                                : imagenNotFount}
+                                imagen={peli.backdrop_path ? 
+                                    `https://image.tmdb.org/t/p/original/${peli.backdrop_path}`
+                                    : notFound
+                                }
                                 titulo={peli.title? peli.title: peli.name}
                                 link={peli.id}
                                 isTV={isTV}

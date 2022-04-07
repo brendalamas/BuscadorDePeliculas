@@ -4,6 +4,7 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Presentacion from "./Presentacion"
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import notFound from "../img/notFound.png"
 
 const Secciones = ({cardPrincipales, titulo, categoria, isTV}) => {
     return (
@@ -12,7 +13,9 @@ const Secciones = ({cardPrincipales, titulo, categoria, isTV}) => {
                 <Typography variant="h6" fontWeight="bold" color="#94131d">
                     {titulo}
                 </Typography>
-                <Link to={`/peliculacategoria/${categoria}`} style={{textDecoration:"none"}}>
+                <Link to={isTV?`/seriecategoria/${categoria}` :`/peliculacategoria/${categoria}`} 
+                    style={{textDecoration:"none"}}
+                >
                     <ArrowForwardIcon sx={{color:"#94131d", ml:2, mt:0.5}}/>
                 </Link>
             </Box>            
@@ -20,7 +23,10 @@ const Secciones = ({cardPrincipales, titulo, categoria, isTV}) => {
                 {cardPrincipales.map((principal)=>(
                     <Box key={principal.id}>
                         <Presentacion
-                        imagen={`https://image.tmdb.org/t/p/original/${principal.poster_path}`}
+                        imagen= {principal.poster_path ? 
+                            `https://image.tmdb.org/t/p/original/${principal.poster_path}`
+                            : notFound
+                        }
                         titulo= {principal.title? principal.title : principal.name}
                         link={principal.id}
                         isTV={isTV}
