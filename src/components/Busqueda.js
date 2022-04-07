@@ -1,17 +1,19 @@
 import { useEffect, useState, useContext } from 'react';
 import {useSearchParams} from "react-router-dom";
+import { apiKey, urlBase } from '../utils/variables';
+
+import Box from '@mui/material/Box';
 import Context from "../context/Context";
 import Paper from '@mui/material/Paper';
 import Container from '@mui/material/Container';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
-import Box from '@mui/material/Box';
 import BusquedaCard from './BusquedaCard';
-import { apiKey, urlBase } from '../utils/variables';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import notFound from "../img/notFound.png";
+import {titulosExtras} from "../utils/titulos";
 
 const Busqueda = () => {
     const context = useContext(Context);
@@ -60,8 +62,8 @@ const Busqueda = () => {
             >
                 <InputBase
                     sx={{ ml: 1, flex: 1 }}
-                    placeholder="Busca tu pelicula"
-                    inputProps={{ 'aria-label': 'Busca tu pelicula' }}
+                    placeholder= {titulosExtras[context.language].busqueda}
+                    inputProps={{ 'aria-label': `${titulosExtras[context.language].busqueda}` }}
                     onChange={handleChangeInput}
                     value={searchParams.get("query")}
                 />

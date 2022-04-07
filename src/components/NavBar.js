@@ -56,16 +56,15 @@ const NavBar = ()=>{
                     </Link>
 
                 </Box>
-                <Box sx={{ width: 120, ml:2}}>
+                <Box sx={{ width: 70, ml:2}}>
                     <FormControl fullWidth>
-                        <InputLabel id="demo-simple-select-label"> Leng</InputLabel>
+                        <InputLabel id="demo-simple-select-label"> 🌍 </InputLabel>
                         <Select
-                        labelId="demo-simple-select-label"
-                        id="demo-simple-select"
-                        label="Age"
-                        onChange={handleChangeIdioma}
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            label="Age"
+                            onChange={handleChangeIdioma}
                        >
-                        
                         <MenuItem value="es">Español</MenuItem>
                         <MenuItem value="en">English</MenuItem>
                         <MenuItem value="pt">Português</MenuItem>

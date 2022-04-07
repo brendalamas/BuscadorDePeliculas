@@ -18,31 +18,25 @@ import Context from "./context/Context"
 
 const App = () => {
   const [language, setLanguage] = useState("es")
-
   const context = {
     language: language,
     setLanguage: setLanguage
   }
-
-  console.log(context)
 
   return (
     <Context.Provider value={context}>
     <BrowserRouter>
       <NavBar/>
       <Routes>
-        <Route path='*' element={<ErrorNoEncontrado/>}/>
         <Route path='/' element={<Home/>}/>
-
         <Route path='/peliculas' element={<Peliculas/>}/>
         <Route path='/series' element={<Series/>}/>
         <Route path='/busqueda' element={<Busqueda/>}/>
-
         <Route path='/peliculacategoria/:idDetalle' element={<PeliculaCategoria/>}/>
         <Route path='/seriecategoria/:idSerie' element={<SerieCategoria/>}/>
         <Route path='/detalle-peliculas/:idPersonajesPeliculas' element={<CardDetallePeliculas/>}/>
         <Route path='/detalle-series/:idPersonajesSeries' element={<CardDetalleSeries/>}/>
-
+        <Route path='*' element={<ErrorNoEncontrado/>}/>
       </Routes>
     </BrowserRouter>
     </Context.Provider>
