@@ -19,13 +19,12 @@ const CarruselHome = ({titulo, pelicula, isLoading, categoria, isTV}) => {
                     </Typography>
                 </Link>
                 <Slider 
-                    dots= {true}
                     infinite= {true}
                     slidesToShow= {3}
                     slidesToScroll= {1}
-                    autoplay= {false}
+                    autoplay= {true}
                     speed= {2000}
-                    autoplaySpeed= {1500}
+                    autoplaySpeed= {2000}
                     cssEase= "linear"
                 >
                     {pelicula.map(peli => (
