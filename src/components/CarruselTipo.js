@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 
 const CarruselTipo = ({tipo, isTV}) => {
     return (
-        <Slider 
+        <Slider
             dots={true}
             infinite= {true}
             slidesToShow={1}
@@ -19,14 +19,14 @@ const CarruselTipo = ({tipo, isTV}) => {
         >
         {tipo.map((pelicula)=>(
             <ImageList sx={{overflow:"hidden"}} key={pelicula.id}>
-                <ImageListItem sx={{maxHeight:350}}>
+                <ImageListItem sx={{maxHeight:350}} className="carrusel">
                     <img
                         src={`https://image.tmdb.org/t/p/original/${pelicula.backdrop_path}`}
                         srcSet={`https://image.tmdb.org/t/p/original/${pelicula.backdrop_path}`}
                         alt={pelicula.title}
                         loading="lazy"
                     />
-                    <Box bgcolor="#111111" sx={{
+                    <Box bgcolor="#111111" className="texto-carrusel" sx={{
                         position:"absolute", 
                         left:350, 
                         bottom:40, 

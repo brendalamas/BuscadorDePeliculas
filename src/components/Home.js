@@ -1,4 +1,3 @@
-import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Footer from "./Footer"
@@ -21,7 +20,7 @@ const Home = ()=>{
   const { pelicula: seriesMejorPuntuadas, isLoading: isLoadingSeriesMejor} = useFetchPeliculas('top_rated','tv', `${context.language}`);
 
     return(
-      <Box sx={{mt:18, display:"flex", flexDirection:"column", position:"relative"}}>
+      <Box sx={{mt:18, display:"flex", flexDirection:"column", position:"relative"}} className="home-box-contenedor">
         <Box sx={{
           display:"flex", 
           flexDirection:"column", 

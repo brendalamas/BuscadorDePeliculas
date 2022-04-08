@@ -11,8 +11,9 @@ const BusquedaCard = ({imagen, titulo, id, tipo}) => {
             <Link to={tipo === "movie"?`/detalle-peliculas/${id}`:`/detalle-series/${id}`} 
                 style={{textDecoration:"none"}}
             >
-                <Box sx={{display:"flex"}}>
-                    <CardMedia sx={{width:300}}
+                <Box className="box-busqueda" sx={{display:"flex"}}>
+                    <CardMedia 
+                    sx={{width:300}}
                     component="img"
                     image = {imagen}
                     alt={titulo}

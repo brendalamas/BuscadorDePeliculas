@@ -61,7 +61,7 @@ const Busqueda = () => {
     };
 
     return(
-        <Container sx={{display:"flex", flexDirection:"column", alignItems:"center", mt:15}}>
+        <Container sx={{display:"flex", flexDirection:"column", alignItems:"center", mt:20}}>
             <Paper
                 component="form"
                 sx={{ p: '2px 4px', display: 'flex', width: 400}}

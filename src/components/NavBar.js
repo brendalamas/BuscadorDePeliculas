@@ -1,10 +1,8 @@
 import {Link} from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-
 import CardMedia from '@mui/material/CardMedia';
 import AppBar from '@mui/material/AppBar';
-import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import TvIcon from '@mui/icons-material/Tv';
@@ -23,14 +21,17 @@ const NavBar = ()=>{
         context.setLanguage(e.target.value)
     }
     // #7F010C
+
     return(
-        <AppBar sx={{
+        <AppBar position ="fixed" 
+            sx={{
             display:"flex", 
             flexDirection:"row", 
             justifyContent:"space-between", 
             alignItems:"center", 
             bgcolor:"#000000",
             pl:1, pr:3}}
+            
         >
             <Box sx={{display:"flex", justifyContent:"flex-start", p:1}}>
                 <Link to="/" style={{textDecoration:"none"}}> 
@@ -47,7 +48,7 @@ const NavBar = ()=>{
                     <Link to="/series" style={{textDecoration:"none"}}> 
                         <Box sx={{display:"flex", justifyContent:"center", alignItems:"center", mr:3}}>
                             <TvIcon sx={{fontSize:35, mr:1}}color="primary"/>
-                            <Typography variant="h6" color="primary">Inicio</Typography>
+                            <Typography variant="h6" color="primary">Series</Typography>
                         </Box>
                     </Link>
                     <Link to="/peliculas" style={{textDecoration:"none"}}> 
@@ -81,7 +82,6 @@ const NavBar = ()=>{
             </Box>
 
         </AppBar>
-
     )
 }
 

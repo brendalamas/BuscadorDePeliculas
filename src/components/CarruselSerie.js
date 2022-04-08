@@ -7,7 +7,7 @@ import { useContext } from 'react';
 
 const CarruselSerie = () => {
     const context = useContext(Context);
-    const {pelicula: principalesSeries, tipoLanguage} = useFetchPeliculas("popular","tv", `${context.language}`)
+    const {pelicula: principalesSeries} = useFetchPeliculas("popular","tv", `${context.language}`)
 
     return(
         <CarruselTipo 
