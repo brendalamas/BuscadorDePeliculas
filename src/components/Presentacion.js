@@ -8,7 +8,7 @@ import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 const Presentacion = ({imagen, titulo, link, isTV}) => {
     return (
         <Link to={isTV? `/detalle-series/${link}`:`/detalle-peliculas/${link}`} style={{textDecoration:"none"}}>
-            <Card
+            <Card className="card-presentacion"
             sx={{
                 display:"flex", 
                 flexDirection:"column", 
@@ -17,7 +17,7 @@ const Presentacion = ({imagen, titulo, link, isTV}) => {
                 bgcolor:"transparent",
                 width:250
             }}>
-                <ImageList sx={{ width: 250, height: 400, m:0}} cols={1} rowHeight={350}>
+                <ImageList className="presentacion-imagen" sx={{ width: 250, height: 400, m:0}} cols={1} rowHeight={350}>
                     <ImageListItem>
                         <img
                             src= {imagen}
@@ -27,7 +27,7 @@ const Presentacion = ({imagen, titulo, link, isTV}) => {
                         />
                     </ImageListItem>
                 </ImageList>
-                <Typography 
+                <Typography className="presentacion-titulo"
                 variant="subtitle1" 
                 color="#111111" 
                 fontWeight="bold" 

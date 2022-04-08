@@ -9,13 +9,30 @@ import Typography from '@mui/material/Typography';
 
 const CardDetallePersonajesID = ({detalles}) => {
     return (
-        <Box sx={{mt:12, display:"flex", flexDirection:"column", bgcolor:"black"}}> 
-            <CardMedia sx={{position:"center", opacity: 0.4}}
-            component="img"
-            image = {`https://image.tmdb.org/t/p/original/${detalles.backdrop_path}`}
-            alt={detalles.title ? detalles.title: detalles.name} 
+        <Box 
+            sx={{
+                mt:12, 
+                display:"flex", 
+                flexDirection:"column", 
+                bgcolor:"black"}}
+        > 
+            <CardMedia className="detalle-img"
+                sx={{
+                    position:"center", 
+                    opacity: 0.4
+                }}
+                component="img"
+                image = {`https://image.tmdb.org/t/p/original/${detalles.backdrop_path}`}
+                alt={detalles.title ? detalles.title: detalles.name} 
             />
-            <CardContent sx={{display:"flex", mt:5, p:1, position:"absolute", left:100, top:100}}>
+
+            <CardContent sx={{
+                display:"flex", 
+                mt:5, p:1, 
+                position:"absolute", 
+                left:100, top:100}}
+                className="position-absolute"
+            >
                 <Box sx={{width:350, display:"flex", justifyContent:"center", alignItems:"center"}}>
                     <CardMedia
                     component="img"
@@ -24,7 +41,7 @@ const CardDetallePersonajesID = ({detalles}) => {
                     />
                 </Box>
                 
-                <Box sx={{pl:2, width:650, color:"white"}}>
+                <Box className="detalle-texto" sx={{pl:2, width:700, color:"white"}}>
                     <Typography variant='h4' fontWeight="bold"> 
                         {detalles.title ? detalles.title: detalles.name}  
                     </Typography>
@@ -55,7 +72,7 @@ const CardDetallePersonajesID = ({detalles}) => {
                         Produccion: 
                         {detalles.production_companies && detalles.production_companies.map((curr) => (
                             <ListItem key={curr.id} sx={{pt:0, pb:0}}>  
-                                <ListItemText
+                                <ListItemText 
                                     primary= {`• ${curr.name}`}
                                 />
                             </ListItem>
@@ -66,7 +83,7 @@ const CardDetallePersonajesID = ({detalles}) => {
                         {detalles.genres && detalles.genres.map((curr) => (
                             <ListItem key={curr.id} sx={{pt:0, pb:0}}>
                                 <LocalMoviesIcon sx={{pr:1}} />
-                                <ListItemText
+                                <ListItemText 
                                     primary= {curr.name}
                                 />
                             </ListItem>
