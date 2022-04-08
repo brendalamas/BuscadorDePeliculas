@@ -349,6 +349,7 @@ $x60rem:60rem;
     @media screen and (max-width: 320px){
         .css-16gelxz-MuiContainer-root, .css-u20uru, .slick-slider, .slick-initialized, .slick-slide{
             width: 18rem!important;
+            height: auto!important;
         }
         .css-o1dvsk, .css-u20uru, .css-j8xoiz-MuiToolbar-root, 
         .css-1q1f8dq-MuiPaper-root-MuiAppBar-root{
@@ -396,6 +397,25 @@ $x60rem:60rem;
         }
         .css-i4bv87-MuiSvgIcon-root {
             font-size: 1rem !important;
+        }
+        .css-98i51m{
+            width: 20rem!important;
+        }
+        .css-c6syf6{
+            padding: $x0rem!important;
+            margin-top: $x1rem!important;
+        }
+        .css-16j4vl7-MuiTypography-root{
+            font-size: .7rem!important;
+        }
+        .css-tqlv0g-MuiSvgIcon-root{
+            font-size: 1rem!important;
+        }
+        .css-1e0njhx-MuiTypography-root{
+            font-size: 2rem!important;
+        }
+        .css-1sra7t5-MuiTypography-root, .css-37bg1m-MuiTypography-root{
+            font-size: 1.5rem!important;
         }
     }
 }
