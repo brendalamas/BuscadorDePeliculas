@@ -10,7 +10,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 const CarruselHome = ({titulo, pelicula, isLoading, categoria, isTV}) => {
     return (
-        <Container class="carrusel-home" sx={{display:"flex", flexDirection:"column", mt:5, mb:7}}>
+        <Container className="carrusel-home" sx={{display:"flex", flexDirection:"column", mt:5, mb:7}}>
             {isLoading && <CircularProgress sx={{color:"black", fontSize:1000}}/>}
             <Box>
                 <Link to={`/peliculacategoria/${categoria}`} style={{textDecoration:"none"}}>
@@ -23,7 +23,7 @@ const CarruselHome = ({titulo, pelicula, isLoading, categoria, isTV}) => {
                     infinite= {true}
                     slidesToShow= {3}
                     slidesToScroll= {1}
-                    autoplay= {true}
+                    autoplay= {false}
                     speed= {2000}
                     autoplaySpeed= {1500}
                     cssEase= "linear"
