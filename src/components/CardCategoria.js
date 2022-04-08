@@ -7,7 +7,7 @@ import notFound from "../img/notFound.png"
 const CardCategoria = ({peliculas, titulos, isTV}) => {
     return (
         <Container sx={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-            <Typography variant="h4" fontWeight="bold" bgcolor="#111111" color="#94131d" sx={{p:1, mb:5}}> 
+            <Typography variant="h4" fontWeight="bold" color="#1976D2" sx={{p:1, mb:5}}> 
                 {titulos} 
             </Typography>
             <Box sx={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>

@@ -30,7 +30,7 @@ const CardCategoriaDetalle = ({titulo, imagen, isTV, id}) => {
                 </ImageList>
                 <Typography 
                     variant="subtitle1" 
-                    color="#000000"
+                    color="#1976D2"
                     fontWeight="bold" 
                     textAlign="center"
                     sx={{p:2}}

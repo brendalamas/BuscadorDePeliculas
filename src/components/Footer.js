@@ -10,27 +10,27 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Footer = () => {
     return (
-        <Box sx={{bgcolor:"#111111", pl:40,pr:40}}>
+        <Box sx={{bgcolor:"#000000", pl:40,pr:40}}>
             <CardContent sx={{display:"flex", justifyContent:"space-around", alignItems:"center"}}>
                 <Box sx={{textAlign:"center"}}>
-                    <Typography variant="subtitle1" color="#94131d" fontWeight="bold"> 
+                    <Typography variant="subtitle1" color="#1976D2" fontWeight="bold"> 
                         🎥 Movie App 
                     </Typography>
-                    <Typography  variant="subtitle1" color="#94131d" fontWeight="bold"> 
+                    <Typography  variant="subtitle1" color="#1976D2" fontWeight="bold"> 
                         Hecho con ♡ por Brenda Lamas
                     </Typography>
                 </Box>
                 <Box>
                     <Link href="https://github.com/brendalamas" underline="none" sx={{p:2}}>
-                        <GitHubIcon sx={{fontSize:35, color:"#94131d"}}/>
+                        <GitHubIcon sx={{fontSize:35, color:"#1976D2"}}/>
                     </Link>
 
                     <Link href="https://mail.google.com/mail/u/0/?tab=rm&ogbl" underline="none" sx={{p:2}}>
-                        <MailIcon sx={{fontSize:35, color:"#94131d"}}/>
+                        <MailIcon sx={{fontSize:35, color:"#1976D2"}}/>
                     </Link>
 
                     <Link href="https://www.linkedin.com/in/brenda-lamas-597b79145/" underline="none" sx={{p:2}}>
-                        <LinkedInIcon sx={{fontSize:35, color:"#94131d"}}/>
+                        <LinkedInIcon sx={{fontSize:35, color:"#1976D2"}}/>
                     </Link>
                 </Box>
 

@@ -29,7 +29,7 @@ const Presentacion = ({imagen, titulo, link, isTV}) => {
                 </ImageList>
                 <Typography className="presentacion-titulo"
                 variant="subtitle1" 
-                color="#111111" 
+                color="#1976D2" 
                 fontWeight="bold" 
                 textAlign="center">
                     {titulo}

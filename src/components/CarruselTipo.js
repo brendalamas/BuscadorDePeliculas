@@ -26,7 +26,7 @@ const CarruselTipo = ({tipo, isTV}) => {
                         alt={pelicula.title}
                         loading="lazy"
                     />
-                    <Box bgcolor="#111111" className="texto-carrusel" sx={{
+                    <Box className="texto-carrusel" sx={{
                         position:"absolute", 
                         left:350, 
                         bottom:40, 
@@ -35,9 +35,10 @@ const CarruselTipo = ({tipo, isTV}) => {
                         p:1,
                         textAlign:"center"
                     }}> 
-                        <Typography variant="subtitle1" fontWeight="bold" color="#FFFFFF"> {pelicula.title} </Typography>
-                        <Typography variant="body2" color="#FFFFFF"> {pelicula.overview} </Typography>
-                        <Link to={isTV? `/detalle-series/${pelicula.id}`:`/detalle-peliculas/${pelicula.id}`} style={{textDecoration:"none"}}>
+                        <Typography variant="subtitle1" fontWeight="bold" color="#1976D2"> {pelicula.title} </Typography>
+                        <Typography variant="body2" color="#1976D2"> {pelicula.overview} </Typography>
+                        <Link to={isTV? `/detalle-series/${pelicula.id}`:`/detalle-peliculas/${pelicula.id}`} 
+                        style={{textDecoration:"none"}}>
                             <Button>Ver mas</Button>
                         </Link>
                     </Box>

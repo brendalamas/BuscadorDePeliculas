@@ -51,7 +51,8 @@ const NavBar = ()=>{
                     <Box sx={{display:"flex", justifyContent:"center"}}>
                         <Box sx={{ width: 100, ml:10}}>
                             <FormControl fullWidth>
-                                <InputLabel id="demo-simple-select-label"> <LanguageIcon sx={{color:"white"}}/></InputLabel>
+                                <InputLabel id="demo-simple-select-label"> <LanguageIcon sx={{color:"#1976D2"}}/>
+                                </InputLabel>
                                 <Select
                                     id="demo-simple-select"
                                     label="Age"
@@ -127,26 +128,26 @@ const NavBar = ()=>{
                 <Box sx={{ display:"flex", justifyContent:"space-between"}}>
                     <Link to="/series" style={{textDecoration:"none"}}> 
                         <Box sx={{display:"flex", justifyContent:"center", alignItems:"center", mr:3}}>
-                            <TvIcon sx={{fontSize:35, mr:1}}color="white"/>
-                            <Typography variant="h6" color="white">Series</Typography>
+                            <TvIcon sx={{fontSize:35, mr:1}}color="#1976D2"/>
+                            <Typography variant="h6" color="#1976D2">Series</Typography>
                         </Box>
                     </Link>
                     <Link to="/peliculas" style={{textDecoration:"none"}}> 
                         <Box sx={{display:"flex", justifyContent:"center", alignItems:"center", mr:3}}>
-                            <VideocamIcon sx={{fontSize:35, mr:1}}color="white"/>
-                            <Typography variant="h6" color="white">Peliculas</Typography>
+                            <VideocamIcon sx={{fontSize:35, mr:1}}color="#1976D2"/>
+                            <Typography variant="h6" color="#1976D2">Peliculas</Typography>
                         </Box>
                     </Link>
                     <Link to="/busqueda" style={{textDecoration:"none"}}> 
                         <Box sx={{display:"flex", justifyContent:"center", alignItems:"center", mr:3}}>
-                            <SearchIcon sx={{fontSize:35, mr:1}}color="white"/> 
-                            <Typography variant="h6" color="white">Buscar</Typography>
+                            <SearchIcon sx={{fontSize:35, mr:1}}color="#1976D2"/> 
+                            <Typography variant="h6" color="#1976D2">Buscar</Typography>
                         </Box>
                     </Link>
                 </Box>
                 <Box sx={{ width: 100, ml:10}}>
                     <FormControl fullWidth>
-                        <InputLabel id="demo-simple-select-label"> <LanguageIcon sx={{color:"white"}}/>  </InputLabel>
+                        <InputLabel id="demo-simple-select-label"> <LanguageIcon sx={{color:"#1976D2"}}/>  </InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
