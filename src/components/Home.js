@@ -26,7 +26,7 @@ const Home = ()=>{
           flexDirection:"column", 
           alignItems:"center", 
           bgcolor:"#000000", 
-          color:"#7F020C",
+          color:"#1976D2",
           mb:10}}
         >
           <Typography variant="h1" fontWeight="bold"> 

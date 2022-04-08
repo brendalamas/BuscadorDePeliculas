@@ -25,7 +25,7 @@ const ItemPelicula = ({titulo, imagen, link, isTV}) => {
                     />
                 </Box>
                 <CardContent sx={{display:"flex", alignItems:"center"}}>
-                    <Typography variant="subtitle1" fontWeight= "bold">
+                    <Typography variant="subtitle1" fontWeight= "bold" color="#1976D2">
                         {titulo}
                     </Typography>
                 </CardContent>

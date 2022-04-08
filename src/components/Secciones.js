@@ -9,14 +9,14 @@ import notFound from "../img/notFound.png"
 const Secciones = ({cardPrincipales, titulo, categoria, isTV}) => {
     return (
         <Container>
-            <Box bgcolor="#111111" sx={{mt:3, mb:3, p:1, display:"flex", alignItems:"center"}}>
-                <Typography variant="h6" fontWeight="bold" color="#94131d">
+            <Box bgcolor="#000000" sx={{mt:3, mb:3, p:1, display:"flex", alignItems:"center"}}>
+                <Typography variant="h6" fontWeight="bold" color="#1976D2">
                     {titulo}
                 </Typography>
                 <Link to={isTV?`/seriecategoria/${categoria}` :`/peliculacategoria/${categoria}`} 
                     style={{textDecoration:"none"}}
                 >
-                    <ArrowForwardIcon sx={{color:"#94131d", ml:2, mt:0.5}}/>
+                    <ArrowForwardIcon sx={{color:"#1976D2", ml:2, mt:0.5}}/>
                 </Link>
             </Box>            
             <Box sx={{display:"flex", justifyContent:"center", mt:3, mb:3, flexWrap:"wrap"}}>

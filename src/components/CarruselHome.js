@@ -14,7 +14,7 @@ const CarruselHome = ({titulo, pelicula, isLoading, categoria, isTV}) => {
             {isLoading && <CircularProgress sx={{color:"black", fontSize:1000}}/>}
             <Box>
                 <Link to={`/peliculacategoria/${categoria}`} style={{textDecoration:"none"}}>
-                    <Typography variant="h4" color="#7C020C" bgcolor="#000000" fontWeight="bold" sx={{p:1, mb:2}}> 
+                    <Typography variant="h4" color="#1976D2" fontWeight="bold" sx={{p:1, mb:2}}> 
                         {titulo}    
                     </Typography>
                 </Link>

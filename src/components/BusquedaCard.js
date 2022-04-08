@@ -23,7 +23,7 @@ const BusquedaCard = ({imagen, titulo, id, tipo}) => {
                     variant="subtitle1" 
                     fontWeight= "bold" 
                     textAlign="center" 
-                    color="#000000"
+                    color="#1976D2"
                 >
                     {titulo}
                 </Typography>
