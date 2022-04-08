@@ -14,7 +14,7 @@ const CarruselTipo = ({tipo, isTV}) => {
             slidesToShow={1}
             slidesToScroll= {1}
             autoplay= {true}
-            autoplaySpeed= {90000}
+            autoplaySpeed= {2000}
             pauseOnHover= {true}
         >
         {tipo.map((pelicula)=>(

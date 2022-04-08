@@ -263,6 +263,8 @@ $x60rem:60rem;
     }
     .css-16gelxz-MuiContainer-root{
         width: 22rem!important;
+        margin-top: 5px!important;
+        height: 40rem;
     }
     .css-14gf7af {
         width: 20rem !important;
@@ -311,9 +313,9 @@ $x60rem:60rem;
     .css-b5q4k1-MuiContainer-root, .css-1oqqzyl-MuiContainer-root{
         width: 22rem!important;
     }
-    .css-1oqqzyl-MuiContainer-root{
-        width: 24rem!important;
-    }
+    // .css-1oqqzyl-MuiContainer-root{
+    //     width: 24rem!important;
+    // }
     .css-16myllp-MuiPaper-root-MuiCard-root, .css-1gd92wp-MuiImageList-root{
         width: 6rem !important;
         height: 12rem!important;
@@ -325,9 +327,7 @@ $x60rem:60rem;
     .css-6aabf5 {
         width: 10rem !important;
     }
-    .slick-next {
-        right: 50px !important;
-    }
+
     .css-2vugot-MuiTypography-root{
         font-size: .7rem!important;
     }
@@ -335,8 +335,67 @@ $x60rem:60rem;
         margin: 0.1rem !important;
         font-size: 1rem!important;
     }
-    .css-1u7am12-MuiCardMedia-root {
-        height: 70rem;
+    .css-1sipvtt-MuiPaper-root-MuiCard-root, .css-1sipvtt-MuiPaper-root-MuiCard-root, 
+    .css-1fq9vkw-MuiCardMedia-root, .slick-slide img{
+        width: 20rem!important;
     }
-    
+    .slick-prev {
+        display: none!important;
+    }
+    .slick-next {
+        display: none!important;
+    }
+
+    @media screen and (max-width: 320px){
+        .css-16gelxz-MuiContainer-root, .css-u20uru, .slick-slider, .slick-initialized, .slick-slide{
+            width: 18rem!important;
+        }
+        .css-o1dvsk, .css-u20uru, .css-j8xoiz-MuiToolbar-root, 
+        .css-1q1f8dq-MuiPaper-root-MuiAppBar-root{
+            width: 20rem !important;
+        }
+        .css-1fq9vkw-MuiCardMedia-root, .slick-slide img{
+            width: 10rem!important;
+        }
+        .css-1sipvtt-MuiPaper-root-MuiCard-root{
+            width: 10rem!important;
+        }
+        .slick-dots {
+            bottom: -40px !important;
+            left: 50px;
+            width: 15rem!important;
+        }
+        .css-orjgci-MuiImageList-root {
+            width: 16rem !important;
+        }
+        .css-1qt3a7f-MuiImageListItem-root .MuiImageListItem-img, .css-1qt3a7f-MuiImageListItem-root{
+            width: 20rem!important;
+            margin-top: 5rem;
+        }
+        .css-b5q4k1-MuiContainer-root, .css-1oqqzyl-MuiContainer-root{
+            width: 20rem!important;
+            margin: $x0rem!important;
+        }
+        .css-j8xoiz-MuiToolbar-root, .css-o1dvsk, .css-u20uru, .css-i2n2aa {
+            width: 18rem !important;
+        }
+        .css-1qt3a7f-MuiImageListItem-root .MuiImageListItem-img {
+            margin-left: 1.3rem!important;
+        }
+        .css-6aabf5 {
+            left: 3rem !important;
+        }
+        .css-1yonlps-MuiPaper-root {
+            width: 10rem !important;
+        }
+        .css-12ni4ax-MuiContainer-root, .css-1757t7i {
+            width: 12rem !important;
+        }
+        .css-yz9k0d-MuiInputBase-input{
+            font-size: .8rem!important;
+        }
+        .css-i4bv87-MuiSvgIcon-root {
+            font-size: 1rem !important;
+        }
+    }
 }

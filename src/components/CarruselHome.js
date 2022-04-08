@@ -19,7 +19,6 @@ const CarruselHome = ({titulo, pelicula, isLoading, categoria, isTV}) => {
                     </Typography>
                 </Link>
                 <Slider 
-                    dots= {true}
                     infinite= {true}
                     slidesToShow= {3}
                     slidesToScroll= {1}
