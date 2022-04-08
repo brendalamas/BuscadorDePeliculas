@@ -92,7 +92,7 @@ $x60rem:60rem;
         margin-top: $x0rem!important;
     }
     .css-12ni4ax-MuiContainer-root{
-        margin-top: $x08rem!important;
+        margin-top: 10rem!important;
     }
     .css-j8xoiz-MuiToolbar-root{
         width: $x45rem!important;
@@ -132,9 +132,211 @@ $x60rem:60rem;
 }
 
 @media screen and (max-width: 425px){
-    .css-j8xoiz-MuiToolbar-root{
-        width: 30rem!important;
-        padding: 0!important;
-        margin: 0!important;
+    #root{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
+    .css-j8xoiz-MuiToolbar-root, .css-1q1f8dq-MuiPaper-root-MuiAppBar-root{
+        width: 27rem!important;
+    }
+    .css-1l4w6pd{
+        padding-right: 1rem!important;
+    }
+    .css-1oqebxh{
+        width: 3rem!important;
+    }
+    .css-14gf7af{
+        width: 25rem!important;
+        .css-1e0njhx-MuiTypography-root{
+            font-size: 3rem!important;
+        }
+        .css-1sra7t5-MuiTypography-root{
+            font-size: 1.5rem!important;
+        }
+    }
+    .css-o1dvsk{
+        @include flex-column;
+    }
+    .css-16gelxz-MuiContainer-root, .css-u20uru, .css-o1dvsk, .css-b5q4k1-MuiContainer-root,
+    .css-1oqqzyl-MuiContainer-root,.css-i2n2aa{
+        width: 27rem!important;
+    }
+    .slick-slider{
+        width: 25rem!important;
+    }
+    .slick-slide img{
+        width: 5rem!important;
+        height: 7rem!important;
+    }
+    .css-1sipvtt-MuiPaper-root-MuiCard-root{
+        width: 7rem !important;
+        height: 10rem!important;
+    }
+    .slick-prev {
+        left: 30px !important;
+    }
+    .slick-next {
+        right: -20px !important;
+    }
+    .css-1isisa7-MuiTypography-root{
+        font-size: .7rem!important;
+    }
+    .css-83oo0v-MuiCardContent-root{
+        padding: 0.3rem!important;
+    }
+    .css-1g5b5l1-MuiSvgIcon-root{
+        font-size: 1.2rem;
+    }
+    .css-3t84jw-MuiTypography-root, .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+        font-size: .8rem!important;
+    }
+    .css-slya9g-MuiTypography-root{
+        font-size: 1.5rem!important;
+    }
+    .css-6aabf5{
+        width: 13rem!important;
+        height: 5rem;
+        bottom: 4rem!important;
+        overflow: scroll!important;
+    }
+    .css-btgn6h-MuiTypography-root{
+        font-size: .7rem!important;
+    }
+    .css-1qt3a7f-MuiImageListItem-root .MuiImageListItem-img, .css-1qt3a7f-MuiImageListItem-root{
+        width: 20rem!important;
+        height: 15rem!important;
+    }
+    .slick-dots{
+        width: 20rem!important;
+        bottom: -45px!important;
+        left: 60px;
+        li{
+            margin: .1rem!important;
+        }
+    }
+    .css-14dupx2-MuiTypography-root{
+        padding-left: 1rem;
+    }
+    .css-16myllp-MuiPaper-root-MuiCard-root{
+        width: 12rem!important;
+        margin: .2rem!important;
+    }
+    .css-1gd92wp-MuiImageList-root{
+        overflow-y:hidden!important;
+    }
+    .css-d3zda8-MuiSvgIcon-root {
+        margin:.2rem!important;
+    }
+    .css-1yonlps-MuiPaper-root{
+        width: 15rem!important;
+    }
+
+    .css-rf5uqc-MuiTypography-root{
+        padding: 0.5rem!important;
+        font-size: .7rem!important;
+    }
+    .css-12ni4ax-MuiContainer-root, .css-1757t7i{
+        width: 27rem!important;
+    }
+    .css-mdpg84-MuiPaper-root-MuiCard-root, .css-qw4886-MuiCardMedia-root{
+        width: 10rem!important;
+    }
+    .css-1757t7i{
+        display: flex!important;
+        flex-direction: row!important;
+        flex-wrap: wrap!important;
+    }
+    .position-absolute {
+        width: 24rem !important;
+        left: 1rem !important;
+        top: 10rem !important;
+    }
+    .position-absolute .detalle-texto {
+        padding-left: 2rem !important;
+    }
+}
+@media screen and (max-width: 375px){
+    .css-j8xoiz-MuiToolbar-root, .css-o1dvsk, .css-u20uru, .css-i2n2aa{
+        width: 25rem!important;
+    }
+    .css-16gelxz-MuiContainer-root{
+        width: 22rem!important;
+    }
+    .css-14gf7af {
+        width: 20rem !important;
+    }
+    .slick-dots {
+        bottom: -45px !important;
+        left: 40px;
+    }
+    .slick-slider, .slick-initialized, .slick-slide{
+        width: 25rem!important;
+    }
+    .css-1g5b5l1-MuiSvgIcon-root {
+        font-size: 1.3rem!important;
+    }
+    .css-1jfyonc-MuiTypography-root-MuiLink-root{
+        padding: .5rem!important;
+    }
+    .css-3t84jw-MuiTypography-root{
+        font-size: .7!important;
+    }
+    .css-14gf7af .css-1e0njhx-MuiTypography-root {
+        font-size: 2rem !important;
+    }
+    .css-14gf7af .css-1sra7t5-MuiTypography-root {
+        font-size: 1.4rem !important;
+    }
+    .css-14gf7af{
+        margin-bottom: 1rem!important;
+    }
+    .position-absolute {
+        width: 18rem !important;
+    }
+    .css-185v394-MuiTypography-root, .css-10wpov9-MuiTypography-root, .css-10hburv-MuiTypography-root,
+    .css-10hburv-MuiTypography-root, .css-f5e7i0-MuiSvgIcon-root{
+        font-size: .8rem!important;
+    }
+    .css-1bfp59o-MuiCardMedia-root{
+        padding-left: 1.4rem!important;
+    }
+    .css-orjgci-MuiImageList-root{
+        width: 18rem!important;
+    }
+    .css-1qt3a7f-MuiImageListItem-root .MuiImageListItem-img{
+        width: 18rem!important;
+    }
+    .css-b5q4k1-MuiContainer-root, .css-1oqqzyl-MuiContainer-root{
+        width: 22rem!important;
+    }
+    .css-1oqqzyl-MuiContainer-root{
+        width: 24rem!important;
+    }
+    .css-16myllp-MuiPaper-root-MuiCard-root, .css-1gd92wp-MuiImageList-root{
+        width: 6rem !important;
+        height: 12rem!important;
+    }
+    .css-pxxd1-MuiImageListItem-root, .css-pxxd1-MuiImageListItem-root .MuiImageListItem-img{
+        width: 6rem !important;
+        height: 9rem!important;
+    }
+    .css-6aabf5 {
+        width: 10rem !important;
+    }
+    .slick-next {
+        right: 50px !important;
+    }
+    .css-2vugot-MuiTypography-root{
+        font-size: .7rem!important;
+    }
+    .css-d3zda8-MuiSvgIcon-root {
+        margin: 0.1rem !important;
+        font-size: 1rem!important;
+    }
+    .css-1u7am12-MuiCardMedia-root {
+        height: 70rem;
+    }
+    
 }

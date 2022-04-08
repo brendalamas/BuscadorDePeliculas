@@ -39,7 +39,7 @@ const NavBar = ()=>{
     return(
         <>
             {/* menu hamburguesa */}
-            <AppBar position="static" sx={{bgcolor:"#000000" }} className="appbar-responsive">
+            <AppBar position="fixed" sx={{bgcolor:"#000000" }} className="appbar-responsive">
                 <Toolbar sx={{display:"flex", justifyContent:"space-between"}}>
                     <Link to="/" style={{textDecoration:"none"}}> 
                         <CardMedia sx={{width:100}}
