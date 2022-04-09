@@ -11,7 +11,7 @@
 <p>Podes encontrar toda la documentación en el siguiente enlace</p>
 <a href="https://developers.themoviedb.org/3">API document</a>
 
-<a href="https://peliculas-bl.netlify.app/">¡Accede a la tienda!</a>
+<a href="https://peliculas-bl.netlify.app/">¡Accede al buscador!</a>
 
 
 ### Tecnologias utilizadas:
