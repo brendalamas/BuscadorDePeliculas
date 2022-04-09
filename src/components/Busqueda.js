@@ -14,8 +14,9 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import notFound from "../img/notFound.png";
 import {titulosExtras} from "../utils/titulos";
-import ErrorNoEncontrado from "./ErrorNoEncontrado";
 import Loader from "./Loader"
+import ErrorNoEncontrado from "./ErrorNoEncontrado";
+
 
 const Busqueda = () => {
     const context = useContext(Context);
@@ -43,7 +44,7 @@ const Busqueda = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        personajes === "" && mostrarError(true)
+        personajes === "" && setMostrarError(true)
         console.log(personajes)
     }        
 
@@ -103,6 +104,7 @@ const Busqueda = () => {
                         />
                     ))}
                 </Box>
+                {mostrarError && <ErrorNoEncontrado/>}
                 <Box sx={{m:4, bgcolor:"#1565C0", borderRadius:2}}>
                     <Stack spacing={2}>
                         <Pagination count={totalPage > 500 ? 500 : totalPage} page={page} 
