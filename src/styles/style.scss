@@ -274,7 +274,7 @@ $x60rem:60rem;
         left: 40px;
     }
     .slick-slider, .slick-initialized, .slick-slide{
-        width: 25rem!important;
+        width: 20rem!important;
     }
     .css-1g5b5l1-MuiSvgIcon-root {
         font-size: 1.3rem!important;
@@ -313,9 +313,6 @@ $x60rem:60rem;
     .css-b5q4k1-MuiContainer-root, .css-1oqqzyl-MuiContainer-root{
         width: 22rem!important;
     }
-    // .css-1oqqzyl-MuiContainer-root{
-    //     width: 24rem!important;
-    // }
     .css-16myllp-MuiPaper-root-MuiCard-root, .css-1gd92wp-MuiImageList-root{
         width: 6rem !important;
         height: 12rem!important;
@@ -345,6 +342,24 @@ $x60rem:60rem;
     .slick-next {
         display: none!important;
     }
+    .css-c6syf6 {
+        padding-left: 50px!important;
+        padding-right: 50px!important;
+    }
+    .css-16j4vl7-MuiTypography-root{
+        font-size: .8rem!important;
+    }
+    .css-tqlv0g-MuiSvgIcon-root{
+        font-size: 1.3rem!important;
+        margin: 0rem!important;
+    }
+    .css-1e0njhx-MuiTypography-root{
+        font-size: 2rem!important;
+    }
+    .css-1sra7t5-MuiTypography-root{
+        font-size: 1.5rem!important;
+    }
+}
 
     @media screen and (max-width: 320px){
         .css-16gelxz-MuiContainer-root, .css-u20uru, .slick-slider, .slick-initialized, .slick-slide{
@@ -418,4 +433,3 @@ $x60rem:60rem;
             font-size: 1.5rem!important;
         }
     }
-}
