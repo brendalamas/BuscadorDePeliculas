@@ -26,8 +26,7 @@ const NavBar = ()=>{
     const handleChangeIdioma = (e) => {
         context.setLanguage(e.target.value)
     }
-    // #7F010C
-    const [auth, setAuth] = useState(true);
+    // const [auth, setAuth] = useState(true);
     const [anchorEl, setAnchorEl] = useState(null);
   
     const handleMenu = (event) => {

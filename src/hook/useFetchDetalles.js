@@ -10,7 +10,6 @@ const useFetchDetalles = (categoria, id, language) =>{
     const [detalles, setDetalles] = useState([])
     const [tipoLanguage, setTipoLanguage] = useState("es")
     const [isLoading, setIsLoading] = useState(false)
-
     const url =`${urlBase}${definirURLDetalles(categoria,id)}?${apiKey}${queryParamLenguaje(language)}`
 
     useEffect(()=>{
@@ -26,7 +25,8 @@ const useFetchDetalles = (categoria, id, language) =>{
 
     return {
         detalles:detalles,
-        isLoading:isLoading
+        isLoading:isLoading,
+        tipoLanguage:tipoLanguage
     }
 }
 

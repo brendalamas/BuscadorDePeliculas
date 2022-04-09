@@ -30,7 +30,8 @@ const useFetchPeliculas = (categoria, tipo, language, page) =>{
     return {
         pelicula:pelicula,
         isLoading: isLoading,
-        totalPage:totalPage
+        totalPage:totalPage,
+        tipoLanguage:tipoLanguage
     }
 }
 

@@ -24,6 +24,7 @@ const Busqueda = () => {
     const [page, setPage] = useState(1);
     const [totalPage, setTotalPage] = useState(1);
     const [isLoading, setIsLoading] = useState(false);
+    const [mostrarError, setMostrarError]=useState(false);
 
     const [searchParams, setSearchParams] = useSearchParams({
         query:""
@@ -42,7 +43,7 @@ const Busqueda = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        personajes === "" && <ErrorNoEncontrado/>
+        personajes === "" && mostrarError(true)
         console.log(personajes)
     }        
 
