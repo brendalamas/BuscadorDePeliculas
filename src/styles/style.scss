@@ -280,6 +280,9 @@ $x60rem:60rem;
         padding-left: 2rem !important;
     }
 }
+
+
+
 @media screen and (max-width: 375px){
     .css-j8xoiz-MuiToolbar-root, .css-o1dvsk, .css-u20uru, .css-i2n2aa{
         width: 25rem!important;
@@ -319,6 +322,10 @@ $x60rem:60rem;
     }
     .position-absolute {
         width: 18rem !important;
+        top: 5rem !important;
+    }
+    .css-1313egv-MuiTypography-root{
+        font-size: 1.5rem!important;
     }
     .css-185v394-MuiTypography-root, .css-10wpov9-MuiTypography-root, .css-10hburv-MuiTypography-root,
     .css-10hburv-MuiTypography-root, .css-f5e7i0-MuiSvgIcon-root{
@@ -335,14 +342,6 @@ $x60rem:60rem;
     }
     .css-b5q4k1-MuiContainer-root, .css-1oqqzyl-MuiContainer-root{
         width: 22rem!important;
-    }
-    .css-16myllp-MuiPaper-root-MuiCard-root, .css-1gd92wp-MuiImageList-root{
-        width: 6rem !important;
-        height: 12rem!important;
-    }
-    .css-pxxd1-MuiImageListItem-root, .css-pxxd1-MuiImageListItem-root .MuiImageListItem-img{
-        width: 6rem !important;
-        height: 9rem!important;
     }
     .css-6aabf5 {
         width: 10rem !important;
@@ -381,6 +380,27 @@ $x60rem:60rem;
     }
     .css-1sra7t5-MuiTypography-root{
         font-size: 1.5rem!important;
+    }
+    .css-qnzhj3-MuiTypography-root{
+        font-size: 1.5rem!important;
+    }
+    .css-1vmeegw-MuiPaper-root-MuiCard-root, .css-pe0pmn-MuiImageList-root{
+        width: 8rem!important;
+        height: auto!important;
+    }
+    .css-pxxd1-MuiImageListItem-root, .css-pxxd1-MuiImageListItem-root .MuiImageListItem-img{
+        width: 8rem!important;
+        height: 8rem!important;
+    }
+    .css-16myllp-MuiPaper-root-MuiCard-root, .css-1gd92wp-MuiImageList-root{
+        width: 8rem !important;
+    }
+    .css-16myllp-MuiPaper-root-MuiCard-root{
+        height: 9rem!important;
+        margin:0.2rem!important;
+    }
+    .css-1gd92wp-MuiImageList-root{
+        height: 8rem!important;
     }
 }
 
@@ -434,7 +454,7 @@ $x60rem:60rem;
             font-size: .8rem!important;
         }
         .css-i4bv87-MuiSvgIcon-root {
-            font-size: 1rem !important;
+            font-size: 1.8rem !important;
         }
         .css-98i51m{
             width: 20rem!important;

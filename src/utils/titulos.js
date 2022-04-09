@@ -38,16 +38,27 @@ export const titulosExtras = {
     es: {
         bienvenidos: "Bienvenidx🎥",
         bienvenidosParrafo: "¡Espero que disfrutes del Buscador!",
-        busqueda: "Busca tu pelicula"
+        busqueda: "Busca tu pelicula",
+        series:"Series",
+        peliculas:"Peliculas",
+        buscar:"Buscar"
     },
     en: {
         bienvenidos: "Welcome🎥",
         bienvenidosParrafo: "I hope you enjoy the Finder!",
-        busqueda: "search your movie"
+        busqueda: "search your movie",
+        series:"Series",
+        peliculas:"Films",
+        buscar:"Search"
+
     },
     pt: {
         bienvenidos: "Receber🎥",
         bienvenidosParrafo: "Espero que gostem do Finder!",
-        busqueda: "procure seu filme"
+        busqueda: "procure seu filme",
+        series:"Série",
+        peliculas:"Películas",
+        buscar:"Olhe para"
+
     }
 }

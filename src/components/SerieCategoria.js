@@ -37,9 +37,11 @@ const SerieCategoria = () => {
                 titulos= {definirTituloSerie()}
                 isTV={true}
             />
-            <Box sx={{m:4}}>
+            <Box sx={{m:4, bgcolor:"#1565C0", borderRadius:2}}>
                 <Stack spacing={2}>
-                    <Pagination count={totalPage > 500 ? 500 : totalPage} page={page} onChange={handleChange} />
+                    <Pagination count={totalPage > 500 ? 500 : totalPage} 
+                    page={page} onChange={handleChange} color="primary"
+                    />
                 </Stack>
             </Box>
         </Container>

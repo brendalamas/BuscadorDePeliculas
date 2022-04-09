@@ -94,7 +94,7 @@ const Busqueda = () => {
                         />
                     ))}
                 </Box>
-                <Box sx={{m:4, bgcolor:"#CECECE"}}>
+                <Box sx={{m:4, bgcolor:"#1565C0", borderRadius:2}}>
                     <Stack spacing={2}>
                         <Pagination count={totalPage > 500 ? 500 : totalPage} page={page} 
                         onChange={handleChange} color="primary"
