@@ -39,7 +39,7 @@ const NavBar = ()=>{
     return(
         <>
             {/* menu hamburguesa */}
-            <AppBar position="fixed" sx={{bgcolor:"#000000" }} className="appbar-responsive">
+            <AppBar position="fixed" sx={{bgcolor:"#000000", display:"none" }} className="appbar-responsive">
                 <Toolbar sx={{display:"flex", justifyContent:"space-between"}}>
                     <Link to="/" style={{textDecoration:"none"}}> 
                         <CardMedia sx={{width:100}}
@@ -112,7 +112,7 @@ const NavBar = ()=>{
         {/* menu sin responsive */}
         <AppBar position ="fixed" className="appbar-web"
             sx={{
-            // display:"flex", 
+            display:"flex", 
             flexDirection:"row", 
             justifyContent:"space-between", 
             alignItems:"center", 
