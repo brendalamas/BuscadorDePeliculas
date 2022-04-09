@@ -15,8 +15,7 @@ import Stack from '@mui/material/Stack';
 import notFound from "../img/notFound.png";
 import {titulosExtras} from "../utils/titulos";
 import ErrorNoEncontrado from "./ErrorNoEncontrado";
-
-
+import Loader from "./Loader"
 
 const Busqueda = () => {
     const context = useContext(Context);
@@ -24,17 +23,20 @@ const Busqueda = () => {
     const [busqueda, setBusqueda] = useState([])
     const [page, setPage] = useState(1);
     const [totalPage, setTotalPage] = useState(1);
+    const [isLoading, setIsLoading] = useState(false);
 
     const [searchParams, setSearchParams] = useSearchParams({
         query:""
     })
         
     useEffect(()=>{
+        setIsLoading(true)
         fetch (`${urlBase}search/multi?${apiKey}&language=${context.language}&query=${busqueda}&page=${page}`)
         .then(res => res.json())
         .then(data => {
             setPersonajes(data.results)
             setTotalPage(data.total_pages)
+            setIsLoading(false)
         })
     },[busqueda, context.language, page])
 
@@ -79,7 +81,13 @@ const Busqueda = () => {
                 </IconButton>        
             </Paper>
 
-            <Box sx={{display:"flex", flexDirection:"column", alignItems:"center", mt:5}}>
+            <Box sx={{
+                display:"flex", 
+                flexDirection:"column", 
+                alignItems:"center", mt:5, 
+                position:"relative"
+            }}>
+                {isLoading && <Loader isLoading={isLoading}/>}
                 <Box sx={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
                     {personajes && personajes.map((personaje)=>(
                         <BusquedaCard

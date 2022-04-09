@@ -12,9 +12,9 @@ import {peliculastitulo} from "../utils/titulos";
 const Peliculas = ()=>{
     const context = useContext(Context);
   
-    const { pelicula: peliculasPopulares} = useFetchPeliculas('popular', 'movie', `${context.language}`);
-    const { pelicula: peliculasMejorCriticas} = useFetchPeliculas('top_rated', 'movie', `${context.language}`);
-    const { pelicula: peliculasAEstrenarse} = useFetchPeliculas('upcoming', 'movie', `${context.language}`);
+    const { pelicula: peliculasPopulares, isLoading} = useFetchPeliculas('popular', 'movie', `${context.language}`);
+    const { pelicula: peliculasMejorCriticas, isLoadingMejorCritica} = useFetchPeliculas('top_rated', 'movie', `${context.language}`);
+    const { pelicula: peliculasAEstrenarse, isLoadingAEstrenar} = useFetchPeliculas('upcoming', 'movie', `${context.language}`);
 
     return(
         <Container sx={{mt:20}}>
@@ -25,18 +25,21 @@ const Peliculas = ()=>{
                     titulo= {peliculastitulo[context.language].populares}
                     categoria="popular"
                     isTV={false}
+                    isLoading={isLoading}
                 />
                 <Secciones
                     cardPrincipales= {cortarArrayPeliculas(peliculasMejorCriticas)}
                     titulo= {peliculastitulo[context.language].mejorPuntuadas}
                     categoria="top_rated"
                     isTV={false}
+                    isLoading={isLoadingMejorCritica}
                 />
                 <Secciones
                     cardPrincipales= {cortarArrayPeliculas(peliculasAEstrenarse)}
                     titulo= {peliculastitulo[context.language].estreno}
                     categoria="upcoming"
                     isTV={false}
+                    isLoading={isLoadingAEstrenar}
                 />
             </Box>
         </Container>

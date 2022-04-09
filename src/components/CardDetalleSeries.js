@@ -9,11 +9,12 @@ const CardDetallePeliculas = () =>{
     const params = useParams() 
     const context = useContext(Context);
 
-    const {detalles: detallesSeries} = useFetchDetalles ("tv", `${params.idPersonajesSeries}`, `${context.language}`)    
+    const {detalles: detallesSeries, isLoading} = useFetchDetalles ("tv", `${params.idPersonajesSeries}`, `${context.language}`)    
 
     return(
         <CardDetallePersonajesID
             detalles={detallesSeries}
+            isLoading={isLoading}
         />   
     )     
 }

@@ -5,10 +5,13 @@ import Box from '@mui/material/Box';
 import Presentacion from "./Presentacion"
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import notFound from "../img/notFound.png"
+import Loader from "./Loader"
 
-const Secciones = ({cardPrincipales, titulo, categoria, isTV}) => {
+const Secciones = ({cardPrincipales, titulo, categoria, isTV, isLoading}) => {
     return (
-        <Container>
+        <Container sx={{position:"relative"}}>
+            {isLoading && <Loader isLoading={isLoading}/>}
+
             <Box bgcolor="#000000" sx={{mt:3, mb:3, p:1, display:"flex", alignItems:"center"}}>
                 <Typography variant="h6" fontWeight="bold" color="#1976D2">
                     {titulo}
