@@ -14,7 +14,7 @@ const CarruselTipo = ({tipo, isTV}) => {
             slidesToShow={1}
             slidesToScroll= {1}
             autoplay= {true}
-            autoplaySpeed= {2000}
+            autoplaySpeed= {2000000}
             pauseOnHover= {true}
         >
         {tipo.map((pelicula)=>(
@@ -33,10 +33,11 @@ const CarruselTipo = ({tipo, isTV}) => {
                         width:500,
                         opacity:0.7,
                         p:1,
+                        bgcolor:"#111111",
                         textAlign:"center"
                     }}> 
-                        <Typography variant="subtitle1" fontWeight="bold" color="#1976D2"> {pelicula.title} </Typography>
-                        <Typography variant="body2" color="#1976D2"> {pelicula.overview} </Typography>
+                        <Typography variant="subtitle1" fontWeight="bold" color="#FFFFFF"> {pelicula.title} </Typography>
+                        <Typography variant="body2" color="#FFFFFF"> {pelicula.overview} </Typography>
                         <Link to={isTV? `/detalle-series/${pelicula.id}`:`/detalle-peliculas/${pelicula.id}`} 
                         style={{textDecoration:"none"}}>
                             <Button>Ver mas</Button>

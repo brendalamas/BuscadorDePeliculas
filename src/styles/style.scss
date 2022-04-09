@@ -75,7 +75,6 @@ animation: lds-hourglass 1.2s infinite;
             padding-left:$x4rem!important;
         }
     }
-
 }
 @media screen and (max-width: 1440px){
     .position-absolute{
@@ -86,9 +85,10 @@ animation: lds-hourglass 1.2s infinite;
 
 @media screen and (max-width: 1024px){
     .position-absolute{
-        width: $x50rem!important;
-        left:$x5rem!important;
-        top:$x10rem!important;
+        margin-left: 5rem;
+    }
+    .css-s6vjjg {
+        width: 25rem;
     }
     .carrusel-home, .css-i2n2aa, .slick-slider, .css-14gf7af{
         width: $x60rem!important;
@@ -96,11 +96,8 @@ animation: lds-hourglass 1.2s infinite;
     .css-o1dvsk{
         @include flex-column;
     }
-
-    .css-1u7am12-MuiCardMedia-root{
-        height: $x50rem;
-    }
 }
+
 @media screen and (max-width: 768px){
     .appbar-web{
         display: none!important;
@@ -134,9 +131,6 @@ animation: lds-hourglass 1.2s infinite;
     .css-b5q4k1-MuiContainer-root{
         margin-top: $x5rem!important;
     }
-    .css-1u7am12-MuiCardMedia-root{
-        height: $x60rem;
-    }
     .css-1sipvtt-MuiPaper-root-MuiCard-root, .slick-slide img{
         width: 11rem!important;
     }
@@ -159,9 +153,16 @@ animation: lds-hourglass 1.2s infinite;
         font-size: 2.5rem!important;
     }
     .css-1qt3a7f-MuiImageListItem-root .MuiImageListItem-img, .css-orjgci-MuiImageList-root{
-        width: 40rem!important;
+        width: 30rem!important;
         margin-top: $x1rem!important;
         margin-left: 2rem!important;
+    }
+    .css-1gxcipk{
+        left: 20%!important;
+        bottom: 3%!important;
+        width: 20rem!important;
+        height: 50%!important;
+        overflow: scroll!important;
     }
     .css-1e0njhx-MuiTypography-root{
         font-size: 2.5rem!important;
@@ -169,6 +170,7 @@ animation: lds-hourglass 1.2s infinite;
     .css-1sra7t5-MuiTypography-root{
         font-size: 1.7rem!important;
     }
+
 }
 
 @media screen and (max-width: 425px){
@@ -178,11 +180,19 @@ animation: lds-hourglass 1.2s infinite;
         align-items: center;
         justify-content: center;
     }
+    .css-1gxcipk {
+        width: 10rem !important;
+    }
+    .css-1qt3a7f-MuiImageListItem-root .MuiImageListItem-img, .css-orjgci-MuiImageList-root {
+        width: 15rem !important;
+        margin-top: 0.8rem !important;
+        margin-left: 0.8rem !important;
+    }
     .css-14gf7af, .carrusel-home, .css-i2n2aa, .slick-slider{
         width: 18rem!important;
     }
     .css-j8xoiz-MuiToolbar-root, .css-1q1f8dq-MuiPaper-root-MuiAppBar-root{
-        width: 27rem!important;
+        width: 25rem!important;
     }
     .css-1l4w6pd{
         padding-right: 1rem!important;
@@ -203,7 +213,7 @@ animation: lds-hourglass 1.2s infinite;
         @include flex-column;
     }
     .css-1s92j07-MuiTypography-root{
-        font-size: .5rem!important;
+        font-size: 1rem!important;
     }
     .css-37bg1m-MuiTypography-root{
         font-size: 1.3rem!important;
@@ -229,10 +239,7 @@ animation: lds-hourglass 1.2s infinite;
     }
     .css-16gelxz-MuiContainer-root, .css-u20uru, .css-o1dvsk, .css-b5q4k1-MuiContainer-root,
     .css-1oqqzyl-MuiContainer-root,.css-i2n2aa{
-        width: 27rem!important;
-    }
-    .slick-slider{
-        width: 18rem!important;
+        width: 20rem!important;
     }
     .slick-slide img{
         width: 5rem!important;
@@ -270,16 +277,12 @@ animation: lds-hourglass 1.2s infinite;
         overflow: scroll!important;
     }
     .css-btgn6h-MuiTypography-root{
-        font-size: .7rem!important;
+        font-size: .5rem!important;
     }
-    .css-1qt3a7f-MuiImageListItem-root .MuiImageListItem-img, .css-1qt3a7f-MuiImageListItem-root{
-        width: 20rem!important;
-        height: 15rem!important;
-    }
-    .slick-dots{
-        width: 20rem!important;
-        bottom: -45px!important;
-        left: 60px;
+    .slick-dots {
+        width: 20rem !important;
+        bottom: -45px !important;
+        left: -20px;
         li{
             margin: .1rem!important;
         }
@@ -298,9 +301,11 @@ animation: lds-hourglass 1.2s infinite;
         margin:.2rem!important;
     }
     .css-1yonlps-MuiPaper-root{
-        width: 15rem!important;
+        width: 12rem!important;
     }
-
+    .css-i4bv87-MuiSvgIcon-root {
+        font-size: 1rem !important;
+    }
     .css-rf5uqc-MuiTypography-root{
         padding: 0.5rem!important;
         font-size: .7rem!important;
@@ -317,12 +322,21 @@ animation: lds-hourglass 1.2s infinite;
         flex-wrap: wrap!important;
     }
     .position-absolute {
-        width: 24rem !important;
-        left: 1rem !important;
-        top: 10rem !important;
+        width: 16rem !important;
+
     }
     .position-absolute .detalle-texto {
         padding-left: 2rem !important;
+    }
+    .css-1313egv-MuiTypography-root{
+        font-size: 1.5rem!important;
+    }
+    .css-185v394-MuiTypography-root, .css-10wpov9-MuiTypography-root, 
+    .css-10hburv-MuiTypography-root, .css-10hburv-MuiTypography-root{
+        font-size: .7rem!important;
+    }
+    .css-f5e7i0-MuiSvgIcon-root{
+        width: .5rem!important;
     }
 }
 
@@ -333,7 +347,7 @@ animation: lds-hourglass 1.2s infinite;
         width: 15rem!important;
     }
     .css-j8xoiz-MuiToolbar-root, .css-o1dvsk, .css-u20uru, .css-i2n2aa{
-        width: 24rem!important;
+        width: 22rem!important;
     }
     .css-14gf7af, .carrusel-home, .css-i2n2aa, .slick-slider{
         margin: 0rem!important;
@@ -353,7 +367,6 @@ animation: lds-hourglass 1.2s infinite;
     }
     .slick-slider, .slick-initialized, .slick-slide{
         width: 18rem!important;
-        height: 35rem;
     }
     .css-1g5b5l1-MuiSvgIcon-root {
         font-size: 1.3rem!important;
@@ -374,15 +387,16 @@ animation: lds-hourglass 1.2s infinite;
         margin-bottom: 1rem!important;
     }
     .position-absolute {
-        width: 18rem !important;
+        width: 16rem !important;
         top: 5rem !important;
+        margin-left: 2rem!important;
     }
     .css-1313egv-MuiTypography-root{
         font-size: 1.5rem!important;
     }
     .css-185v394-MuiTypography-root, .css-10wpov9-MuiTypography-root, .css-10hburv-MuiTypography-root,
     .css-10hburv-MuiTypography-root, .css-f5e7i0-MuiSvgIcon-root{
-        font-size: .8rem!important;
+        font-size: .7rem!important;
     }
     .css-1bfp59o-MuiCardMedia-root{
         padding-left: 1.4rem!important;
@@ -391,7 +405,7 @@ animation: lds-hourglass 1.2s infinite;
         width: 18rem!important;
     }
     .css-1qt3a7f-MuiImageListItem-root .MuiImageListItem-img{
-        width: 18rem!important;
+        width: 16rem!important;
     }
     .css-b5q4k1-MuiContainer-root, .css-1oqqzyl-MuiContainer-root{
         width: 22rem!important;
@@ -477,12 +491,12 @@ animation: lds-hourglass 1.2s infinite;
             left: 50px;
             width: 15rem!important;
         }
-        .css-orjgci-MuiImageList-root {
-            width: 16rem !important;
-        }
         .css-1qt3a7f-MuiImageListItem-root .MuiImageListItem-img, .css-1qt3a7f-MuiImageListItem-root{
             width: 20rem!important;
             margin-top: 5rem;
+        }
+        .css-1gxcipk {
+            width: 4rem !important;
         }
         .css-b5q4k1-MuiContainer-root, .css-1oqqzyl-MuiContainer-root{
             width: 20rem!important;
@@ -490,9 +504,6 @@ animation: lds-hourglass 1.2s infinite;
         }
         .css-j8xoiz-MuiToolbar-root, .css-o1dvsk, .css-u20uru, .css-i2n2aa {
             width: 18rem !important;
-        }
-        .css-1qt3a7f-MuiImageListItem-root .MuiImageListItem-img {
-            margin-left: 1.3rem!important;
         }
         .css-6aabf5 {
             left: 3rem !important;
@@ -538,5 +549,15 @@ animation: lds-hourglass 1.2s infinite;
         }
         .css-1l4w6pd{
             width: 7rem!important;
+        }
+        .css-b5c3e-MuiTypography-root{
+            font-size: .5rem!important;
+        }
+        .css-vdx7p-MuiTypography-root{
+            font-size: .7rem!important;
+        }
+        .css-qnzhj3-MuiTypography-root{
+            font-size: 1.1rem!important;
+            @include text-center;
         }
     }
