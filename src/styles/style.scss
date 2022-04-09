@@ -23,6 +23,40 @@ $x50rem:50rem;
 $x55rem:55rem;
 $x60rem:60rem;
 
+.lds-hourglass {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top:10%;
+    width: 550px;
+    height: 550px;
+}
+.lds-hourglass:after {
+content: " ";
+display: block;
+border-radius: 50%;
+width: 0;
+height: 0;
+margin: 8px;
+box-sizing: border-box;
+border: 32px solid #1976D2;
+border-color: #1976D2 transparent #1976D2 transparent;
+animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+100% {
+    transform: rotate(1800deg);
+}
+}
+  
 
 @mixin flex-column{
     display: flex;
@@ -78,7 +112,7 @@ $x60rem:60rem;
         @include flex-column;
     }
     .css-14gf7af, .carrusel-home, .css-i2n2aa, .slick-slider{
-        width: $x45rem!important;
+        width: 35rem!important;
     }
     .position-absolute{
         width: $x40rem!important;
@@ -129,6 +163,12 @@ $x60rem:60rem;
         margin-top: $x1rem!important;
         margin-left: 2rem!important;
     }
+    .css-1e0njhx-MuiTypography-root{
+        font-size: 2.5rem!important;
+    }
+    .css-1sra7t5-MuiTypography-root{
+        font-size: 1.7rem!important;
+    }
 }
 
 @media screen and (max-width: 425px){
@@ -137,6 +177,9 @@ $x60rem:60rem;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    .css-14gf7af, .carrusel-home, .css-i2n2aa, .slick-slider{
+        width: 18rem!important;
     }
     .css-j8xoiz-MuiToolbar-root, .css-1q1f8dq-MuiPaper-root-MuiAppBar-root{
         width: 27rem!important;
@@ -163,17 +206,17 @@ $x60rem:60rem;
         font-size: .5rem!important;
     }
     .css-37bg1m-MuiTypography-root{
-        font-size: 1.5rem!important;
+        font-size: 1.3rem!important;
     }
     .css-1e0njhx-MuiTypography-root{
-        font-size: 3.7rem!important;
-    }
-    .css-1sra7t5-MuiTypography-root{
         font-size: 2.5rem!important;
     }
+    .css-1sra7t5-MuiTypography-root{
+        font-size: 1.7rem!important;
+    }
     .css-c6syf6 {
-        padding-left: 100px!important;
-        padding-right: 100px!important;
+        padding-left: 0px!important;
+        padding-right: 0px!important;
     }
     .css-16j4vl7-MuiTypography-root {
         font-size: .7rem!important;
@@ -181,13 +224,15 @@ $x60rem:60rem;
     .css-tqlv0g-MuiSvgIcon-root {
         font-size: 1.3rem!important;
     }
-
+    .css-98i51m{
+        width: 18rem!important;
+    }
     .css-16gelxz-MuiContainer-root, .css-u20uru, .css-o1dvsk, .css-b5q4k1-MuiContainer-root,
     .css-1oqqzyl-MuiContainer-root,.css-i2n2aa{
         width: 27rem!important;
     }
     .slick-slider{
-        width: 25rem!important;
+        width: 18rem!important;
     }
     .slick-slide img{
         width: 5rem!important;
@@ -284,8 +329,15 @@ $x60rem:60rem;
 
 
 @media screen and (max-width: 375px){
+    .css-98i51m{
+        width: 15rem!important;
+    }
     .css-j8xoiz-MuiToolbar-root, .css-o1dvsk, .css-u20uru, .css-i2n2aa{
-        width: 25rem!important;
+        width: 24rem!important;
+    }
+    .css-14gf7af, .carrusel-home, .css-i2n2aa, .slick-slider{
+        margin: 0rem!important;
+        padding: 0rem!important;
     }
     .css-16gelxz-MuiContainer-root{
         width: 22rem!important;
@@ -300,7 +352,8 @@ $x60rem:60rem;
         left: 40px;
     }
     .slick-slider, .slick-initialized, .slick-slide{
-        width: 20rem!important;
+        width: 18rem!important;
+        height: 35rem;
     }
     .css-1g5b5l1-MuiSvgIcon-root {
         font-size: 1.3rem!important;
@@ -406,7 +459,7 @@ $x60rem:60rem;
 
     @media screen and (max-width: 320px){
         .css-16gelxz-MuiContainer-root, .css-u20uru, .slick-slider, .slick-initialized, .slick-slide{
-            width: 18rem!important;
+            width: 10rem!important;
             height: auto!important;
         }
         .css-o1dvsk, .css-u20uru, .css-j8xoiz-MuiToolbar-root, 
@@ -474,5 +527,16 @@ $x60rem:60rem;
         }
         .css-1sra7t5-MuiTypography-root, .css-37bg1m-MuiTypography-root{
             font-size: 1.5rem!important;
+        }
+        .css-14gf7af, .carrusel-home, .css-i2n2aa, .slick-slider {
+            width: 18rem !important;
+            margin: 0!important;
+            padding: 0!important;
+        }
+        .css-r93zzx-MuiTypography-root{
+            font-size: .7rem!important;
+        }
+        .css-1l4w6pd{
+            width: 7rem!important;
         }
     }

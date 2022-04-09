@@ -5,13 +5,17 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import notFound from "../img/notFound.png"
-import CircularProgress from '@mui/material/CircularProgress';
-
+import Loader from "./Loader"
 
 const CarruselHome = ({titulo, pelicula, isLoading, categoria, isTV}) => {
     return (
-        <Container className="carrusel-home" sx={{display:"flex", flexDirection:"column", mt:5, mb:7}}>
-            {isLoading && <CircularProgress sx={{color:"black", fontSize:1000}}/>}
+        <Container className="carrusel-home" 
+        sx={{
+            display:"flex", 
+            flexDirection:"column", mt:5, mb:7,
+            position:"relative"
+        }}>
+            {isLoading && <Loader isLoading={isLoading}/>}
             <Box>
                 <Link to={`/peliculacategoria/${categoria}`} style={{textDecoration:"none"}}>
                     <Typography variant="h4" color="#1976D2" fontWeight="bold" sx={{p:1, mb:2}}> 

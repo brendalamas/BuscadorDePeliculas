@@ -6,9 +6,7 @@ import useFetchPeliculas from "../hook/useFetchPeliculas";
 import { cortarArrayPeliculas } from "../utils/variables";
 import Context from "../context/Context";
 import { useContext } from 'react';
-
 import {titulosExtras, seriestitulo, peliculastitulo} from "../utils/titulos";
-
 
 const Home = ()=>{
   const context = useContext(Context);

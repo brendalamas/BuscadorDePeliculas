@@ -5,17 +5,21 @@ import ListItem from '@mui/material/ListItem';
 import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
+import Loader from "./Loader"
 
 
-const CardDetallePersonajesID = ({detalles}) => {
+const CardDetallePersonajesID = ({detalles, isLoading}) => {
     return (
         <Box 
             sx={{
                 mt:12, 
                 display:"flex", 
                 flexDirection:"column", 
-                bgcolor:"black"}}
+                bgcolor:"black",
+                position:"relative"
+            }}
         > 
+        {isLoading && <Loader isLoading={isLoading}/>}
             <CardMedia className="detalle-img"
                 sx={{
                     position:"center", 

@@ -1,14 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import "./styles/style.scss"
-
 import {useState} from "react"
 import Home from "./components/Home" 
 import Peliculas from "./components/Peliculas"
 import Series from "./components/Series"
 import Busqueda from "./components/Busqueda"
 import ErrorNoEncontrado from "./components/ErrorNoEncontrado"
-
 import NavBar from "./components/NavBar"
 import PeliculaCategoria from './components/PeliculaCategoria';
 import SerieCategoria from './components/SerieCategoria';

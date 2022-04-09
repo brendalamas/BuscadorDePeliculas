@@ -15,7 +15,8 @@ const Presentacion = ({imagen, titulo, link, isTV}) => {
                 alignItems:"center", 
                 m:1.5, 
                 bgcolor:"transparent",
-                width:250
+                width:250,
+                position:"relative"
             }}>
                 <ImageList className="presentacion-imagen" sx={{ width: 250, height: 400, m:0}} cols={1} rowHeight={350}>
                     <ImageListItem>

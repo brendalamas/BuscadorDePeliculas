@@ -21,9 +21,9 @@ const useFetchPeliculas = (categoria, tipo, language, page) =>{
         .then(res=>res.json())
         .then(data=>{
             setPelicula(data.results)
-            setIsLoading(false);
             setTipoLanguage(data.results);
             setTotalPage(data.total_pages);
+            setIsLoading(false);
         })
     }, [url, page])
     
