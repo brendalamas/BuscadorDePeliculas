@@ -1,9 +1,11 @@
-<!-- <img src="">
- -->
----------------
-### Buscador de Peliculas - EN PROCESO
+<img src="https://user-images.githubusercontent.com/74736159/162553997-89bc0143-e87e-444f-a1b6-63d726861dcf.png">
+<img src="https://user-images.githubusercontent.com/74736159/162554015-63f20d95-3f7b-42ba-b64c-864912ccf8e4.png">
+ 
 
-<p>Este es el proyecto final que realice para el curso de ADA ITW. </p>
+---------------
+### Buscador de Peliculas - PROYECTO FINAL
+
+<p>Este es el proyecto final que realice para el final del curso de ADA ITW. </p>
 
 
 <p>Podes encontrar toda la documentación en el siguiente enlace</p>
@@ -18,6 +20,7 @@
   <li>JAVASCRIPT</li>
   <li>MATERIAL UI</li>
   <li>REACT </li>
+  <li>SASS </li>
 </ul>
 
 ### Contenido:
@@ -33,13 +36,6 @@
   <li>Librerias de carrousel</li>
   <li>Custom Hooks</li>
 </ul>
-
-### ¿Que podes realizar con esta pagina?
-- Podes navegar por las secciones: Home, Ultimos Lanzamientos, Populares, Buscador
-- Podes hacer click en las tarjetas de las diferentes secciones y ver en detalle la informacion de cada una.
-- En las tarjetas de detalle se puede observar: Titulo, descripcion ......
-- Podes utilizar el buscador para ver una pelicula en especial
-
 
 ----------
 ### Para clonar el proyecto:
