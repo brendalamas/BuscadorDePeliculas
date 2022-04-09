@@ -18,6 +18,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import LanguageIcon from '@mui/icons-material/Language';
+import {titulosExtras} from "../utils/titulos";
 
 
 const NavBar = ()=>{
@@ -91,13 +92,19 @@ const NavBar = ()=>{
                             onClose={handleClose}
                         >
                             <Link to="/series" style={{textDecoration:"none"}}> 
-                                <MenuItem onClick={handleClose}>Series</MenuItem>
+                                <MenuItem onClick={handleClose}>
+                                    {titulosExtras[context.language].series}
+                                </MenuItem>
                             </Link>
                             <Link to="/peliculas" style={{textDecoration:"none"}}>
-                                <MenuItem onClick={handleClose}>Peliculas</MenuItem>
+                                <MenuItem onClick={handleClose}>
+                                    {titulosExtras[context.language].peliculas}
+                                </MenuItem>
                             </Link>
                             <Link to="/busqueda" style={{textDecoration:"none"}}>
-                                <MenuItem onClick={handleClose}>Buscar</MenuItem>
+                                <MenuItem onClick={handleClose}>
+                                    {titulosExtras[context.language].buscar}
+                                </MenuItem>
                             </Link>
                         </Menu>
                     </Box>
@@ -129,19 +136,25 @@ const NavBar = ()=>{
                     <Link to="/series" style={{textDecoration:"none"}}> 
                         <Box sx={{display:"flex", justifyContent:"center", alignItems:"center", mr:3}}>
                             <TvIcon sx={{fontSize:35, mr:1}}color="#1976D2"/>
-                            <Typography variant="h6" color="#1976D2">Series</Typography>
+                            <Typography variant="h6" color="#1976D2">
+                                {titulosExtras[context.language].peliculas}    
+                            </Typography>
                         </Box>
                     </Link>
                     <Link to="/peliculas" style={{textDecoration:"none"}}> 
                         <Box sx={{display:"flex", justifyContent:"center", alignItems:"center", mr:3}}>
                             <VideocamIcon sx={{fontSize:35, mr:1}}color="#1976D2"/>
-                            <Typography variant="h6" color="#1976D2">Peliculas</Typography>
+                            <Typography variant="h6" color="#1976D2">
+                            {titulosExtras[context.language].series}
+                            </Typography>
                         </Box>
                     </Link>
                     <Link to="/busqueda" style={{textDecoration:"none"}}> 
                         <Box sx={{display:"flex", justifyContent:"center", alignItems:"center", mr:3}}>
                             <SearchIcon sx={{fontSize:35, mr:1}}color="#1976D2"/> 
-                            <Typography variant="h6" color="#1976D2">Buscar</Typography>
+                            <Typography variant="h6" color="#1976D2">
+                                {titulosExtras[context.language].buscar}
+                            </Typography>
                         </Box>
                     </Link>
                 </Box>
