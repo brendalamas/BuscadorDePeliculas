@@ -33,6 +33,7 @@ const CardDetallePersonajesID = ({detalles, isLoading}) => {
             <CardContent sx={{
                 display:"flex", 
                 mt:5, p:1, 
+                // no dejes codigo comentado en una entrega
                 // position:"absolute", 
                 left:100, top:100}}
                 className="position-absolute"

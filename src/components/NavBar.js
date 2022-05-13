@@ -38,6 +38,7 @@ const NavBar = ()=>{
     };
     return(
         <>
+        {/* innecesario el fragmento aqui */}
             {/* menu hamburguesa */}
             <AppBar position="fixed" sx={{bgcolor:"#000000", display:"none" }} className="appbar-responsive">
                 <Toolbar sx={{display:"flex", justifyContent:"space-between"}}>

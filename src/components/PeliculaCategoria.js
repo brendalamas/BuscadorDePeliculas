@@ -16,6 +16,8 @@ const PeliculaCategoria = () => {
     const {pelicula, totalPage} = useFetchPeliculas(`${params.idDetalle}`, 'movie', `${context.language}`, page);
 
     const definirTitulo = () =>{
+        // en serie categoria tenes un if similar: pensa como hacer una funcion auxiliar compartida
+        // que te resuelva esta logica para ambos componentes!
         if (params.idDetalle === "popular") {
             return "Peliculas Populares"
         }else if (params.idDetalle === "top_rated"){

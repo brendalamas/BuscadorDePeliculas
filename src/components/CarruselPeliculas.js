@@ -7,6 +7,7 @@ import { useContext } from 'react';
 
 
 const CarruselPeliculas = () => {
+    // Este componente y CarruselSerie son muuuuy parecidos. Como podriamos unificarlo en uno solo?
     const context = useContext(Context);
     const {pelicula: principales} = useFetchPeliculas("now_playing","movie", `${context.language}`)
 
