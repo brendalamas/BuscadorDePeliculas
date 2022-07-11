@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// o css o scss: no ambos
 import './App.css';
 import "./styles/style.scss"
 import {useState} from "react"
@@ -17,6 +18,7 @@ import Context from "./context/Context"
 
 const App = () => {
   const [language, setLanguage] = useState("es")
+  // hermoso el uso de contexto!!
   const context = {
     language: language,
     setLanguage: setLanguage

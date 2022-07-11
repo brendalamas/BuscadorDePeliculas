@@ -7,6 +7,7 @@ import {
   } from "../utils/variables";
 
 const useFetchDetalles = (categoria, id, language) =>{
+    // muy bien resuelto este hook
     const [detalles, setDetalles] = useState([])
     const [tipoLanguage, setTipoLanguage] = useState("es")
     const [isLoading, setIsLoading] = useState(false)

@@ -8,6 +8,7 @@ const CardDetallePeliculas = () =>{
     const params = useParams() 
     const context = useContext(Context);
 
+    // no necesitas interpolar aca? podias pasar directamente params.idPersonajesPeliculas y context.language
     const {detalles: detallesPeliculas, isLoading} = useFetchDetalles ("movie", `${params.idPersonajesPeliculas}`,`${context.language}`)    
 
 

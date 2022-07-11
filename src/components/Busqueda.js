@@ -33,6 +33,7 @@ const Busqueda = () => {
         
     useEffect(()=>{
         setIsLoading(true)
+        // por que no usar un custom hook aca  como en los detalles?
         fetch (`${urlBase}search/multi?${apiKey}&language=${context.language}&query=${busqueda}&page=${page}`)
         .then(res => res.json())
         .then(data => {
@@ -45,6 +46,7 @@ const Busqueda = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         personajes === "" && setMostrarError(true)
+        // no dejes console log
         console.log(personajes)
     }        
 

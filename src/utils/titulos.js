@@ -1,3 +1,4 @@
+// usa camelCase: deberia ser seriesTitulo, idem peliculasTitulo
 export const seriestitulo = {
     es: {
       populares: "Series Populares",

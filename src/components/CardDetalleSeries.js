@@ -8,7 +8,7 @@ import { useContext } from 'react';
 const CardDetallePeliculas = () =>{
     const params = useParams() 
     const context = useContext(Context);
-
+// misma observacion aca, no es necesario interpolar aqui
     const {detalles: detallesSeries, isLoading} = useFetchDetalles ("tv", `${params.idPersonajesSeries}`, `${context.language}`)    
 
     return(
